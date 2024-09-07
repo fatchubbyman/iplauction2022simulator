@@ -1,4 +1,4 @@
-#                                                          ideas/scrapped ideas(this program is incomplete)
+#                                    ideas/scrapped ideas(this program is incomplete), i am still learning how to code and run this in a proper way
 #random (with probability)
 #find a way to skip players that will be bought by other teams
 #this is gonna be a big fckn nest of random numbers
@@ -28,3 +28,4 @@
 # sluggish bids get 3/10
 # before playing use this list to have an idea to get an idea of whos in whose set
 # https://documents.iplt20.com/documents/IPL/document/2022/02/IPL2022PlayerAuction_List_Sets.pdf
+#
