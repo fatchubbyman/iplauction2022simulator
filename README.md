@@ -1,4 +1,4 @@
-#                                                          ideas/scrapped ideas
+#                                                          ideas/scrapped ideas(this program is incomplete)
 #random (with probability)
 #find a way to skip players that will be bought by other teams
 #this is gonna be a big fckn nest of random numbers
