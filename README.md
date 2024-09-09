@@ -1,4 +1,4 @@
-#                                    ideas/scrapped ideas(this program is incomplete), i am still learning how to code and run this in a proper way
+#                                    ideas/scrapped ideas(this program is incomplete), i am still learning how to code and run this in a better way
 #random (with probability)
 #find a way to skip players that will be bought by other teams
 #this is gonna be a big fckn nest of random numbers
