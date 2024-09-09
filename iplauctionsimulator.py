@@ -632,6 +632,7 @@ def sequence_of_functions():
         srh_ai_response(random_marquee)
 
 def bidding(bid_history,list2,list3):
+    sold = True
     result = [x - y for x, y in zip(bid_history, list2)]
     while result != [0,0,0,0,0,0,0,0,0,0]:
         list3 = bid_history
@@ -643,7 +644,6 @@ def bidding(bid_history,list2,list3):
             continue
         else:
             print("This player is sold to the opposing team for %d! Here comes the next bid! " % price)
-            marquee_set_deletion(random_marquee)
             sold = False
     if sold == True:
         print("%s is sold to %s(you) for %d! " % (random_marquee,team,price))
@@ -657,17 +657,7 @@ def bidding(bid_history,list2,list3):
 for i in range (len(marquee)+1):
     price = 20000000
     random_marquee = rd.choice(marquee)
-    csk_bid = 0
-    dc_bid = 0
-    gt_bid = 0
-    kkr_bid = 0
-    lsg_bid = 0
-    mi_bid = 0
-    pbks_bid = 0
-    rr_bid = 0
-    rcb_bid = 0
-    srh_bid = 0
-    bid_history = [csk_bid,dc_bid,gt_bid,kkr_bid,lsg_bid,mi_bid,pbks_bid,rr_bid,rcb_bid,srh_bid]
+    bid_history = []
     marquee_set_selection_display(random_marquee)
     decision = input("Bid? (Press Enter to bid .5cr or back out by typing no) ")
     sold = False
