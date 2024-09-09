@@ -30,7 +30,7 @@
 # https://documents.iplt20.com/documents/IPL/document/2022/02/IPL2022PlayerAuction_List_Sets.pdf
 import random as rd
 #                                                                    dataBase
-marquee = ["R. Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
+marquee = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
 marquee_nationalities = ["🛺", "✈️", "✈️", "✈️", "🛺", "✈️", "🛺", "✈️", "🛺", "✈️"]
 marquee_roles = ["Bowler", "Bowler", "Bowler", "Wicketkeeper", "Batter", "Batter", "Batter", "Bowler", "Bowler", "Batter"]
 ba1 = ["Shimron Hetmyer", "David Miller", "Devdutt Padikkal", "Manish Pandey", "Suresh Raina", "Jason Roy", "Steve Smith", "Robin Uthappa"]
@@ -90,81 +90,81 @@ al5_roles = ["All Rounder","All Rounder","All Rounder","All Rounder","All Rounde
 al6 = ["Curtis Campher", "Colin De Grandhomme", "James Faulkner", "Craig Overton", "Wayne Parnell", "Samit Patel", "Thisara Perera", "Darcy Short", "Murali Vijay"]
 al6_nationalities = ["✈️", "✈️", "✈️", "✈️", "✈️", "✈️", "✈️", "✈️", "🛺"]
 al6_roles = ["All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","Batter"]
-uncapped_prospects = ["Dewald Brevis","Priyam Garg","Rajat Patidar","Anmolpreet Singh","Rahul Tripathi","Shahbaz Ahamad","Harpreet Brar","Deepak Hooda","Sarfaraz Khan","Shahrukh Khan","Shivam Mavi","Kamlesh Nagarkoti","Riyan Parag","Abhishek Sharma","Rahul Tewatia","KS Bharat","Anuj Rawat","Jitesh Sharma","Prabhsimran Singh","Vishnu Vinod","Akash Deep","Tushar Deshpande","Avesh Khan","Ishan Porel","Ankit Rajpoot","Basil Thampi","Kartik Tyagi","Murugan Ashwin","Shreyas Gopal","Rinku SIngh","Gerald Coetzee"]
-uncapped_prospects_nationalities = ["✈️", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺","✈️"]
-uncapped_prospects_roles = ["Batter","Batter","Batter","Batter","Batter","All Rounder","All Rounder","All Rounder","Batter","Batter","Bowler","Bowler","All Rounder","All Rounder","All Rounder","Wicketkeeper","Wicketkeeper","Wicketkeeper","Wicketkeeper","Wicketkeeper","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Batter","Bowler"]
+uncapped_prospects = ["Dewald Brevis","Priyam Garg","Rajat Patidar","Anmolpreet Singh","Rahul Tripathi","Shahbaz Ahamad","Harpreet Brar","Deepak Hooda","Sarfaraz Khan","Shahrukh Khan","Shivam Mavi","Kamlesh Nagarkoti","Riyan Parag","Abhishek Sharma","Rahul Tewatia","KS Bharat","Anuj Rawat","Jitesh Sharma","Prabhsimran Singh","Vishnu Vinod","Akash Deep","Tushar Deshpande","Avesh Khan","Ishan Porel","Ankit Rajpoot","Basil Thampi","Kartik Tyagi","M Ashwin","Shreyas Gopal","Rinku SIngh","Gerald Coetzee","Sai Kishore"]
+uncapped_prospects_nationalities = ["✈️", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺", "🛺","✈️" ,"🛺"]
+uncapped_prospects_roles = ["Batter","Batter","Batter","Batter","Batter","All Rounder","All Rounder","All Rounder","Batter","Batter","Bowler","Bowler","All Rounder","All Rounder","All Rounder","Wicketkeeper","Wicketkeeper","Wicketkeeper","Wicketkeeper","Wicketkeeper","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Batter","Bowler","All Rounder"]
 
 top_bids_csk = ["Deepak Chahar","Ambati Rayudu"]
 medium_bids_csk = ["Dwayne Bravo","Shivam Dube","Chris Jordan"]
 meh_bids_csk = ["Robin Uthappa","Maheesh Theeksana","Mitchell Santner","Devon Convay"]
 top_bids_dc = ["Shardul Thakur","Mitchell Marsh","David Warner"]
-medium_bids_dc = []
-meh_bids_dc = []
+medium_bids_dc = ["Khaleel Ahmed","Chetan Sakariya","Rovman Powell","Mustafizur Rahman"]
+meh_bids_dc = ["KS Bharat","Kuldeep Yadav","Kamlesh Nagarkoti"]
 top_bids_gt = ["Lockie Ferguson","Rahul Tewatia","Mohammed Shami"]
-medium_bids_gt = []
-meh_bids_gt = []
+medium_bids_gt = ["Yash Dayal","Sai Kishore","David Miller","Matthew Wade","Alzarri Joseph"]
+meh_bids_gt = ["Jason Roy","Wriddhiman Saha","Jayant Yadav","Vijay Shankar"]
 top_bids_kkr = ["Shreyas Iyer","Nitish Rana","Pat Cummins"]
-medium_bids_kkr = []
-meh_bids_kkr = []
+medium_bids_kkr = ["Sam Billings","Umesh Yadav"]
+meh_bids_kkr = ["Tim Southee","Alex Hales","Mohammad Nabi","Ajinkya Rahane"]
 top_bids_lsg = ["Avesh Khan","Jason Holder","Krunal Pandya","Mark Wood","Quinton De Kock"]
-medium_bids_lsg = []
-meh_bids_lsg = []
+medium_bids_lsg = ["Deepak Hooda","Manish Pandey","Evin Lewis","Dushmanta Chameera"]
+meh_bids_lsg = ["K Gowtham","Shahbaz Nadeem","Kyle Mayers"]
 top_bids_mi = ["Ishan Kishan","Tim David","Jofra Archer"]
-medium_bids_mi = []
-meh_bids_mi = []
+medium_bids_mi = ["Dewald Brevis","Daniel Sams","Tilak Varma","M Ashwin","Tymal Mills"]
+meh_bids_mi = ["Jaydev Unadkat","Riley Meredith","Fabian Allen","Mayank Markande"]
 top_bids_pbks = ["Liam Livingstone","Kagiso Rabada","Shahrukh Khan","Shikhar Dhawan","Jonny Bairstow"]
-medium_bids_pbks = []
-meh_bids_pbks = []
+medium_bids_pbks = ["Odean Smith","Rahul Chahar","Harpreet Brar"]
+meh_bids_pbks = ["Nathan Ellis","Prabhsimran Singh","Rishi Dhawan","Bhanuka Rajapaksa"]
 top_bids_rr = ["Prasidh Krishna","Shimron Hetmyer","Trent Boult","Devdutt Padikkal","Yuzvendra Chahal"]
-medium_bids_rr = []
-meh_bids_rr = []
+medium_bids_rr = ["R Ashwin","Riyan Parag","Navdeep Saini","Nathan Coulter-Nile"]
+meh_bids_rr = ["James Neesham","Karun Nair","Daryl Mitchell"]
 top_bids_rcb = ["Harshal Patel","Wanindu Hasaranga","Josh Hazlewood","Faf du Plessis"]
-medium_bids_rcb = []
-meh_bids_rcb = []
+medium_bids_rcb = ["Dinesh Karthik","Anuj Rawat","Shahbaz Ahmed","David Willey","Sherfane Rutherford"]
+meh_bids_rcb = ["Finn Allen","Jason Behrendorff","Siddarth Kaul","Karn Sharma"]
 top_bids_srh = ["Nicholas Pooran","Washington Sundar","Rahul Tripathi","Romario Shepherd","Abhishek Sharma"]
-medium_bids_srh = []
-meh_bids_srh = []
+medium_bids_srh = ["Bhuvneshwar Kumar","Marco Jansen","Kartik Tyagi","T Natarajan","Aiden Markram"]
+meh_bids_srh = ["Sean Abbott","Glenn Phillips","Vishnu Vinod","Fazalhaq Farooqi","Priyam Garg"]
 
 csk_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-csk_ai_mid = [""]
-csk_ai_meh = [""]
-csk_ai_f_around = [""]
-dc_ai_top = [""]
-dc_ai_mid = [""]
-dc_ai_meh = [""]
-dc_ai_f_around = [""]
-gt_ai_top = [""]
-gt_ai_mid = [""]
-gt_ai_meh = [""]
-gt_ai_f_around = [""]
-kkr_ai_top = [""]
-kkr_ai_mid = [""]
-kkr_ai_meh = [""]
-kkr_ai_f_around = [""]
-lsg_ai_top = [""]
-lsg_ai_mid = [""]
-lsg_ai_meh = [""]
-lsg_ai_f_around = [""]
-mi_ai_top = [""]
-mi_ai_mid = [""]
-mi_ai_meh = [""]
-mi_ai_f_around = [""]
-pbks_ai_top = [""]
-pbks_ai_mid = [""]
-pbks_ai_meh = [""]
-pbks_ai_f_around = [""]
-rr_ai_top = [""]
-rr_ai_mid = [""]
-rr_ai_meh = [""]
-rr_ai_f_around = [""]
-rcb_ai_top = [""]
-rcb_ai_mid = [""]
-rcb_ai_meh = [""]
-rcb_ai_f_around = [""]
-srh_ai_top = [""]
-srh_ai_mid = [""]
-srh_ai_meh = [""]
-srh_ai_f_around = [""]
+csk_ai_mid = [""] #7/10 based off how bad they want these players
+csk_ai_meh = [""] #7/10 based off how bad they want these players
+csk_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+dc_ai_top = [""] #7/10 based off how bad they want these players
+dc_ai_mid = [""] #7/10 based off how bad they want these players
+dc_ai_meh = [""] #7/10 based off how bad they want these players
+dc_ai_f_around = ["no","no","no","no","no","no","no","no","bid","bid"] #7/10 based off how bad they want these players
+gt_ai_top = [""] #7/10 based off how bad they want these players
+gt_ai_mid = [""] #7/10 based off how bad they want these players
+gt_ai_meh = [""] #7/10 based off how bad they want these players
+gt_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players 
+kkr_ai_top = [""] #7/10 based off how bad they want these players
+kkr_ai_mid = [""] #7/10 based off how bad they want these players
+kkr_ai_meh = [""] #7/10 based off how bad they want these players
+kkr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+lsg_ai_top = [""] #7/10 based off how bad they want these players
+lsg_ai_mid = [""] #7/10 based off how bad they want these players
+lsg_ai_meh = [""] #7/10 based off how bad they want these players
+lsg_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+mi_ai_top = [""] #7/10 based off how bad they want these players
+mi_ai_mid = [""] #7/10 based off how bad they want these players
+mi_ai_meh = [""] #7/10 based off how bad they want these players
+mi_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+pbks_ai_top = [""] #7/10 based off how bad they want these players
+pbks_ai_mid = [""] #7/10 based off how bad they want these players
+pbks_ai_meh = [""] #7/10 based off how bad they want these players
+pbks_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+rr_ai_top = [""] #7/10 based off how bad they want these players
+rr_ai_mid = [""] #7/10 based off how bad they want these players
+rr_ai_meh = [""] #7/10 based off how bad they want these players
+rr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+rcb_ai_top = [""] #7/10 based off how bad they want these players
+rcb_ai_mid = [""] #7/10 based off how bad they want these players
+rcb_ai_meh = [""] #7/10 based off how bad they want these players
+rcb_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+srh_ai_top = [""] #7/10 based off how bad they want these players
+srh_ai_mid = [""] #7/10 based off how bad they want these players
+srh_ai_meh = [""] #7/10 based off how bad they want these players
+srh_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
 
 # function of displaying player and his price
 # function of few lines of code suiting each owner's auction habits
@@ -173,7 +173,7 @@ srh_ai_f_around = [""]
 #                                                                         simulator
 #instructions :
 # press enter to bid .5 cr/move to the next round, type "over" to end your bid
-team = (input("Which Team would you like to represent? CSK/DC/GT/KKR/LSG/MI/PBKS/RR/RCB/SRH" )).lower()
+team = (input("Which Team would you like to represent? CSK/DC/GT/KKR/LSG/MI/PBKS/RR/RCB/SRH " )).lower()
 if team == "csk":
     squad = ["Ravindra Jadeja","MS Dhoni","Moeen Ali","Ruturaj Gaikwad"]
     purse = 480000000
@@ -233,221 +233,220 @@ def pbks_ai_response(random_marquee):
         if rd.choice(pbks_ai_top) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
-            pbks_bid += 1
-    if random_marquee in medium_bids_pbks:
+            bid_history[6] += 1
+    elif random_marquee in medium_bids_pbks:
         if rd.choice(pbks_ai_mid) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
-            pbks_bid += 1
-    if random_marquee in meh_bids_pbks:
+            bid_history[6] += 1
+    elif random_marquee in meh_bids_pbks:
         if rd.choice(pbks_ai_meh) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
-            pbks_bid += 1
+            bid_history[6] += 1
     else:
         if rd.choice(pbks_ai_f_around) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
-            pbks_bid += 1
+            bid_history[6] += 1
 def dc_ai_response(random_marquee):
     """Study habits of dc auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_dc:
         if rd.choice(dc_ai_top) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
-            dc_bid += 1
-    if random_marquee in medium_bids_dc:
+            bid_history[1] += 1
+    elif random_marquee in medium_bids_dc:
         if rd.choice(dc_ai_mid) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
-            dc_bid += 1
-    if random_marquee in meh_bids_dc:
+            bid_history[1] += 1
+    elif random_marquee in meh_bids_dc:
         if rd.choice(dc_ai_meh) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
-            dc_bid += 1
+            bid_history[1] += 1
     else:
         if rd.choice(dc_ai_f_around) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
-            dc_bid += 1          
+            bid_history[1] += 1      
 def mi_ai_response(random_marquee):
     """Study habits of mi auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_mi:
         if rd.choice(mi_ai_top) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
-            mi_bid += 1  
-    if random_marquee in medium_bids_mi:
+            bid_history[5] += 1
+    elif random_marquee in medium_bids_mi:
         if rd.choice(mi_ai_mid) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
-            mi_bid += 1  
-    if random_marquee in meh_bids_mi:
+            bid_history[5] += 1 
+    elif random_marquee in meh_bids_mi:
         if rd.choice(mi_ai_meh) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
-            mi_bid += 1  
+            bid_history[5] += 1
     else:
         if rd.choice(mi_ai_f_around) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
-            mi_bid += 1       
+            bid_history[5] += 1      
 def gt_ai_response(random_marquee):
     """Study habits of gt auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_gt:
         if rd.choice(gt_ai_top) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
-            gt_bid += 1
+            bid_history[2] += 1   
     if random_marquee in medium_bids_gt:
         if rd.choice(gt_ai_mid) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
-            gt_bid += 1
+            bid_history[2] += 1   
     if random_marquee in meh_bids_gt:
         if rd.choice(gt_ai_meh) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
-            gt_bid += 1
+            bid_history[2] += 1   
     else:
         if rd.choice(gt_ai_f_around) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
-            gt_bid += 1  
+            bid_history[2] += 1   
 def kkr_ai_response(random_marquee):
     """Study habits of kkr auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_kkr:
         if rd.choice(kkr_ai_top) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
-            kkr_bid += 1
+            bid_history[3] += 1   
     if random_marquee in medium_bids_kkr:
         if rd.choice(kkr_ai_mid) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
-            kkr_bid += 1
+            bid_history[3] += 1   
     if random_marquee in meh_bids_kkr:
         if rd.choice(kkr_ai_meh) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
-            kkr_bid += 1
+            bid_history[3] += 1   
     else:
         if rd.choice(kkr_ai_f_around) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
-            kkr_bid += 1       
+            bid_history[3] += 1       
 def srh_ai_response(random_marquee):
     """Study habits of srh auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_srh:
         if rd.choice(srh_ai_top) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            srh_bid += 1       
+            bid_history[9] += 1          
     if random_marquee in medium_bids_srh:
         if rd.choice(csk_ai_mid) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            srh_bid += 1       
+            bid_history[9] += 1        
     if random_marquee in meh_bids_srh:
         if rd.choice(srh_ai_meh) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            bid_history[9] += 1
-            srh_bid += 1       
+            bid_history[9] += 1    
     else:
         if rd.choice(srh_ai_f_around) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            srh_bid += 1       
+            bid_history[9] += 1       
 def rr_ai_response(random_marquee):
     """Study habits of rr auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_rr:
         if rd.choice(rr_ai_top) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
-            rr_bid += 1
+            bid_history[7] += 1  
     if random_marquee in medium_bids_rr:
         if rd.choice(rr_ai_mid) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
-            rr_bid += 1
+            bid_history[7] += 1  
     if random_marquee in meh_bids_rr:
         if rd.choice(rr_ai_meh) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
-            rr_bid += 1
+            bid_history[7] += 1  
     else:
         if rd.choice(rr_ai_f_around) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
-            rr_bid += 1
+            bid_history[7] += 1  
 def lsg_ai_response(random_marquee):
     """Study habits of lsg auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_lsg:
         if rd.choice(lsg_ai_top) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
-            lsg_bid += 1
+            bid_history[4] += 1  
     if random_marquee in medium_bids_lsg:
         if rd.choice(lsg_ai_mid) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
-            lsg_bid += 1
+            bid_history[4] += 1
     if random_marquee in meh_bids_lsg:
         if rd.choice(lsg_ai_meh) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
-            lsg_bid += 1
+            bid_history[4] += 1
     else:
         if rd.choice(lsg_ai_f_around) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
-            lsg_bid += 1
+            bid_history[4] += 1
 def rcb_ai_response(random_marquee):
     """Study habits of rcb auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_rcb:
         if rd.choice(rcb_ai_top) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
-            rcb_bid += 1
+            bid_history[8] += 1
     if random_marquee in medium_bids_rcb:
         if rd.choice(rcb_ai_mid) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
-            rcb_bid += 1
+            bid_history[8] += 1
     if random_marquee in meh_bids_rcb:
         if rd.choice(rcb_ai_meh) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
-            rcb_bid += 1
+            bid_history[8] += 1
     else:
         if rd.choice(rcb_ai_f_around) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
-            rcb_bid += 1
+            bid_history[8] += 1
 def csk_ai_response(random_marquee):
     """Study habits of csk auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_csk:
         if rd.choice(csk_ai_top) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
-            csk_bid += 1
+            bid_history[0] += 1
     if random_marquee in medium_bids_csk:
         if rd.choice(csk_ai_mid) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
-            csk_bid += 1
+            bid_history[0] += 1
     if random_marquee in meh_bids_csk:
         if rd.choice(csk_ai_meh) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
-            csk_bid += 1
+            bid_history[0] += 1
     else:
         if rd.choice(csk_ai_f_around) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
-            csk_bid += 1
+            bid_history[0] += 1
 
 def sequence_of_functions():
     """this is to remove the team you picked and only get responses from the teams you havent picked"""
@@ -555,27 +554,27 @@ def sequence_of_functions():
 def bidding(bid_history,list2,list3):
     result = [x - y for x, y in zip(bid_history, list2)]
     while result != [0,0,0,0,0,0,0,0,0,0]:
-        list3[:] = bid_history
+        list3 = bid_history
         sequence_of_functions()
-        list2[:] = list3
+        list2 = list3
         bid_again = input("Press Enter to bid another 5000000 to %d" % price)
         if bid_again == "":
             price += 5000000
+            continue
         else:
             print("This player is sold to the opposing team for %d! Here comes the next bid! " % price)
             marquee_set_deletion(random_marquee)
             sold = False
-            break
-    if sold != False:
-        marquee_set_selection(random_marquee)
-        marquee_set_deletion(random_marquee)
-    elif sold == True:
+    if sold == True:
         print("%s is sold to %s(you) for %d! " % (random_marquee,team,price))
         marquee_set_selection(random_marquee)
         marquee_set_deletion(random_marquee)
+    elif sold == False:
+        print("This player is sold to the opposing team for %d! Here comes the next bid! " % price)
+        marquee_set_deletion(random_marquee)
         
 #                                                            the actual simulator
-for i in range (1,len(marquee)+1):
+for i in range (len(marquee)+1):
     price = 20000000
     random_marquee = rd.choice(marquee)
     csk_bid = 0
@@ -601,12 +600,15 @@ for i in range (1,len(marquee)+1):
                 marquee_set_selection(random_marquee)
                 marquee_set_deletion(random_marquee)
                 sold = True
-                break
             elif bid_history != [0,0,0,0,0,0,0,0,0,0]:
                 list2 = [0,0,0,0,0,0,0,0,0,0]
                 list3 = []
                 bidding(bid_history,list2,list3)
+                continue
     else:
         print("%s is unsold for tonight! " % random_marquee)
         marquee_set_deletion(random_marquee)
 print(squad)
+
+
+
