@@ -234,21 +234,29 @@ def pbks_ai_response(random_marquee):
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
             bid_history[6] += 1
+        else:
+            pass
     elif random_marquee in medium_bids_pbks:
         if rd.choice(pbks_ai_mid) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
             bid_history[6] += 1
+        else:
+            pass
     elif random_marquee in meh_bids_pbks:
         if rd.choice(pbks_ai_meh) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
             bid_history[6] += 1
+        else:
+            pass
     else:
         if rd.choice(pbks_ai_f_around) == "bid":
             price += 5000000
             print("PBKS! %d? " % (price+5000000))
             bid_history[6] += 1
+        else:
+            pass
 def dc_ai_response(random_marquee):
     """Study habits of dc auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_dc:
@@ -256,21 +264,29 @@ def dc_ai_response(random_marquee):
             price += 5000000
             print("DC! %d? " % (price+5000000))
             bid_history[1] += 1
+        else:
+            pass
     elif random_marquee in medium_bids_dc:
         if rd.choice(dc_ai_mid) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
             bid_history[1] += 1
+        else:
+            pass
     elif random_marquee in meh_bids_dc:
         if rd.choice(dc_ai_meh) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
             bid_history[1] += 1
+        else:
+            pass
     else:
         if rd.choice(dc_ai_f_around) == "bid":
             price += 5000000
             print("DC! %d? " % (price+5000000))
-            bid_history[1] += 1      
+            bid_history[1] += 1    
+        else:
+            pass  
 def mi_ai_response(random_marquee):
     """Study habits of mi auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_mi:
@@ -278,43 +294,59 @@ def mi_ai_response(random_marquee):
             price += 5000000
             print("MI! %d? " % (price+5000000))
             bid_history[5] += 1
+        else:
+            pass
     elif random_marquee in medium_bids_mi:
         if rd.choice(mi_ai_mid) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
             bid_history[5] += 1 
+        else:
+            pass
     elif random_marquee in meh_bids_mi:
         if rd.choice(mi_ai_meh) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
             bid_history[5] += 1
+        else:
+            pass
     else:
         if rd.choice(mi_ai_f_around) == "bid":
             price += 5000000
             print("MI! %d? " % (price+5000000))
-            bid_history[5] += 1      
+            bid_history[5] += 1   
+        else:
+            pass   
 def gt_ai_response(random_marquee):
     """Study habits of gt auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_gt:
         if rd.choice(gt_ai_top) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
-            bid_history[2] += 1   
+            bid_history[2] += 1
+        else:
+            pass   
     if random_marquee in medium_bids_gt:
         if rd.choice(gt_ai_mid) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
             bid_history[2] += 1   
+        else:
+            pass
     if random_marquee in meh_bids_gt:
         if rd.choice(gt_ai_meh) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
             bid_history[2] += 1   
+        else:
+            pass
     else:
         if rd.choice(gt_ai_f_around) == "bid":
             price += 5000000
             print("GT! %d? " % (price+5000000))
-            bid_history[2] += 1   
+            bid_history[2] += 1
+        else:
+            pass
 def kkr_ai_response(random_marquee):
     """Study habits of kkr auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_kkr:
@@ -322,21 +354,29 @@ def kkr_ai_response(random_marquee):
             price += 5000000
             print("KKR! %d? " % (price+5000000))
             bid_history[3] += 1   
+        else:
+            pass
     if random_marquee in medium_bids_kkr:
         if rd.choice(kkr_ai_mid) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
             bid_history[3] += 1   
+        else:
+            pass
     if random_marquee in meh_bids_kkr:
         if rd.choice(kkr_ai_meh) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
             bid_history[3] += 1   
+        else:
+            pass
     else:
         if rd.choice(kkr_ai_f_around) == "bid":
             price += 5000000
             print("KKR! %d? " % (price+5000000))
-            bid_history[3] += 1       
+            bid_history[3] += 1
+        else:
+            pass       
 def srh_ai_response(random_marquee):
     """Study habits of srh auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_srh:
@@ -344,21 +384,29 @@ def srh_ai_response(random_marquee):
             price += 5000000
             print("SRH! %d? " % (price+5000000))
             bid_history[9] += 1          
+        else:
+            pass
     if random_marquee in medium_bids_srh:
         if rd.choice(csk_ai_mid) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            bid_history[9] += 1        
+            bid_history[9] += 1       
+        else:
+            pass 
     if random_marquee in meh_bids_srh:
         if rd.choice(srh_ai_meh) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            bid_history[9] += 1    
+            bid_history[9] += 1 
+        else:
+            pass   
     else:
         if rd.choice(srh_ai_f_around) == "bid":
             price += 5000000
             print("SRH! %d? " % (price+5000000))
-            bid_history[9] += 1       
+            bid_history[9] += 1  
+        else:
+            pass     
 def rr_ai_response(random_marquee):
     """Study habits of rr auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_rr:
@@ -366,21 +414,29 @@ def rr_ai_response(random_marquee):
             price += 5000000
             print("RR! %d? " % (price+5000000))
             bid_history[7] += 1  
+        else:
+            pass
     if random_marquee in medium_bids_rr:
         if rd.choice(rr_ai_mid) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
             bid_history[7] += 1  
+        else:
+            pass
     if random_marquee in meh_bids_rr:
         if rd.choice(rr_ai_meh) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
             bid_history[7] += 1  
+        else:
+            pass
     else:
         if rd.choice(rr_ai_f_around) == "bid":
             price += 5000000
             print("RR! %d? " % (price+5000000))
-            bid_history[7] += 1  
+            bid_history[7] += 1 
+        else:
+            pass 
 def lsg_ai_response(random_marquee):
     """Study habits of lsg auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_lsg:
@@ -388,21 +444,29 @@ def lsg_ai_response(random_marquee):
             price += 5000000
             print("LSG! %d? " % (price+5000000))
             bid_history[4] += 1  
+        else:
+            pass
     if random_marquee in medium_bids_lsg:
         if rd.choice(lsg_ai_mid) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
             bid_history[4] += 1
+        else:
+            pass
     if random_marquee in meh_bids_lsg:
         if rd.choice(lsg_ai_meh) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
             bid_history[4] += 1
+        else:
+            pass
     else:
         if rd.choice(lsg_ai_f_around) == "bid":
             price += 5000000
             print("LSG! %d? " % (price+5000000))
             bid_history[4] += 1
+        else:
+            pass
 def rcb_ai_response(random_marquee):
     """Study habits of rcb auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_rcb:
@@ -410,21 +474,29 @@ def rcb_ai_response(random_marquee):
             price += 5000000
             print("RCB! %d? " % (price+5000000))
             bid_history[8] += 1
+        else:
+            pass
     if random_marquee in medium_bids_rcb:
         if rd.choice(rcb_ai_mid) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
             bid_history[8] += 1
+        else:
+            pass
     if random_marquee in meh_bids_rcb:
         if rd.choice(rcb_ai_meh) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
             bid_history[8] += 1
+        else:
+            pass
     else:
         if rd.choice(rcb_ai_f_around) == "bid":
             price += 5000000
             print("RCB! %d? " % (price+5000000))
             bid_history[8] += 1
+        else:
+            pass
 def csk_ai_response(random_marquee):
     """Study habits of csk auction tactics and what players they bid for more often"""
     if random_marquee in top_bids_csk:
@@ -432,21 +504,29 @@ def csk_ai_response(random_marquee):
             price += 5000000
             print("CSK! %d? " % (price+5000000))
             bid_history[0] += 1
+        else:
+            pass
     if random_marquee in medium_bids_csk:
         if rd.choice(csk_ai_mid) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
             bid_history[0] += 1
+        else:
+            pass
     if random_marquee in meh_bids_csk:
         if rd.choice(csk_ai_meh) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
             bid_history[0] += 1
+        else:
+            pass
     else:
         if rd.choice(csk_ai_f_around) == "bid":
             price += 5000000
             print("CSK! %d? " % (price+5000000))
             bid_history[0] += 1
+        else:
+            pass
 
 def sequence_of_functions():
     """this is to remove the team you picked and only get responses from the teams you havent picked"""
