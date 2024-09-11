@@ -528,7 +528,7 @@ def csk_ai_response(random_marquee):
         else:
             pass
 
-def sequence_of_functions():
+def sequence_of_functions(team):
     """this is to remove the team you picked and only get responses from the teams you havent picked"""
     if team.lower() == "rcb":
         csk_ai_response(random_marquee)
@@ -636,8 +636,12 @@ def bidding(bid_history,list2,list3):
     result = [x - y for x, y in zip(bid_history, list2)]
     while result != [0,0,0,0,0,0,0,0,0,0]:
         list3 = bid_history
-        sequence_of_functions()
+        sequence_of_functions(team)
         list2 = list3
+        # write something here that sums up the bids in one iteration
+        for j in result:
+            if result[j] == 1:
+                price += 5000000
         bid_again = input("Press Enter to bid another 5000000 to %d" % price)
         if bid_again == "":
             price += 5000000
@@ -664,7 +668,7 @@ for i in range (len(marquee)+1):
     if decision == "":
         price += 5000000
         while sold != True:
-            sequence_of_functions()
+            sequence_of_functions(team)
             if bid_history == [0,0,0,0,0,0,0,0,0,0]:
                 print("%s is sold to %s(you)! " % (random_marquee,team))
                 marquee_set_selection(random_marquee)
