@@ -126,45 +126,45 @@ medium_bids_srh = ["Bhuvneshwar Kumar","Marco Jansen","Kartik Tyagi","T Nataraja
 meh_bids_srh = ["Sean Abbott","Glenn Phillips","Vishnu Vinod","Fazalhaq Farooqi","Priyam Garg"]
 
 csk_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-csk_ai_mid = [""] #7/10 based off how bad they want these players
-csk_ai_meh = [""] #7/10 based off how bad they want these players
-csk_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-dc_ai_top = [""] #7/10 based off how bad they want these players
-dc_ai_mid = [""] #7/10 based off how bad they want these players
-dc_ai_meh = [""] #7/10 based off how bad they want these players
-dc_ai_f_around = ["no","no","no","no","no","no","no","no","bid","bid"] #7/10 based off how bad they want these players
-gt_ai_top = [""] #7/10 based off how bad they want these players
-gt_ai_mid = [""] #7/10 based off how bad they want these players
-gt_ai_meh = [""] #7/10 based off how bad they want these players
-gt_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players 
-kkr_ai_top = [""] #7/10 based off how bad they want these players
-kkr_ai_mid = [""] #7/10 based off how bad they want these players
-kkr_ai_meh = [""] #7/10 based off how bad they want these players
-kkr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-lsg_ai_top = [""] #7/10 based off how bad they want these players
-lsg_ai_mid = [""] #7/10 based off how bad they want these players
-lsg_ai_meh = [""] #7/10 based off how bad they want these players
-lsg_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-mi_ai_top = [""] #7/10 based off how bad they want these players
-mi_ai_mid = [""] #7/10 based off how bad they want these players
-mi_ai_meh = [""] #7/10 based off how bad they want these players
-mi_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-pbks_ai_top = [""] #7/10 based off how bad they want these players
-pbks_ai_mid = [""] #7/10 based off how bad they want these players
-pbks_ai_meh = [""] #7/10 based off how bad they want these players
-pbks_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-rr_ai_top = [""] #7/10 based off how bad they want these players
-rr_ai_mid = [""] #7/10 based off how bad they want these players
-rr_ai_meh = [""] #7/10 based off how bad they want these players
-rr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-rcb_ai_top = [""] #7/10 based off how bad they want these players
-rcb_ai_mid = [""] #7/10 based off how bad they want these players
-rcb_ai_meh = [""] #7/10 based off how bad they want these players
-rcb_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
-srh_ai_top = [""] #7/10 based off how bad they want these players
-srh_ai_mid = [""] #7/10 based off how bad they want these players
-srh_ai_meh = [""] #7/10 based off how bad they want these players
-srh_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #7/10 based off how bad they want these players
+csk_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+csk_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+csk_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+dc_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+dc_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+dc_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+dc_ai_f_around = ["no","no","no","no","no","no","no","no","bid","bid"] #2/10 based off how bad they want these players
+gt_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+gt_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+gt_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+gt_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players 
+kkr_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+kkr_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+kkr_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+kkr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+lsg_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+lsg_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+lsg_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+lsg_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+mi_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+mi_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+mi_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+mi_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+pbks_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+pbks_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+pbks_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+pbks_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+rr_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+rr_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+rr_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+rr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+rcb_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+rcb_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+rcb_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+rcb_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
+srh_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
+srh_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
+srh_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
+srh_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
 
 # function of displaying player and his price
 # function of few lines of code suiting each owner's auction habits
@@ -592,6 +592,7 @@ def sequence_of_functions(team):
         srh_ai_response(random_marquee)
 
 def bidding(bid_history,list2,list3):
+    global price
     sold = True
     result = [x - y for x, y in zip(bid_history, list2)]
     while result != [0,0,0,0,0,0,0,0,0,0]:
@@ -617,6 +618,7 @@ def bidding(bid_history,list2,list3):
         
 #                                                            the actual simulator
 for i in range (len(marquee)+1):
+    global price
     price = 20000000
     random_marquee = rd.choice(marquee)
     bid_history = [0,0,0,0,0,0,0,0,0,0]
