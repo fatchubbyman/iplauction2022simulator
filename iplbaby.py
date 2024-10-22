@@ -185,5 +185,6 @@ for i in range(len(wks2)):
 for i in range(len(seamers2)):
     seamers2[i] = Player(role = seamers2_roles[i],price = 5000000, nationality= seamers2_nationalities[i])
 
-for i in range(len())
+for i in range(len(spinners2)):
+    spinners2[i] = Player(role = spinners2_roles[i], price = 5000000, nationality = spinners2_nationalities[i]) 
     
