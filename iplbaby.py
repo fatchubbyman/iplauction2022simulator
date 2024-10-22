@@ -189,10 +189,34 @@ for i in range(len(spinners2)):
     spinners2[i] = Player(role = spinners2_roles[i], price = 5000000, nationality = spinners2_nationalities[i]) 
 
 for i in range (len(ba3)):
-    ba3[i] = Player(role = ba3_roles[i], price =5000000,nationality = ba3_nationalities[i]) 
+    ba3[i] = Player(role = ba3_roles[i], price =2000000,nationality = ba3_nationalities[i]) 
 
 for i in range(len(al3)) :
-    al3[i] = Player(role = al3_roles[i], price = 5000000,nationality = al3_nationalities[i]) 
+    al3[i] = Player(role = al3_roles[i], price = 2000000,nationality = al3_nationalities[i]) 
 
-for i in range (len
-    
+for i in range (len(seamers3)):
+    seamers3[i] = Player(role = seamers3_roles[i],price = 2000000, nationality= seamers3_nationalities[i])
+
+for i in range (len(spinners3)):
+    spinners3[i] = Player(role = spinners3_roles[i], price = 2000000,nationality=spinners3_nationalities[i])
+
+for i in range (len(ba4)):
+    ba4[i] = Player(role = ba4_roles[i], price = 2000000, nationality= ba4_nationalities[i])
+
+for i in range(len(al4)):
+    al4[i] = Player(role = al4_roles[i], price = 2000000, nationality = al4_nationalities[i])
+
+for i in range(len(seamers4)):
+    seamers4[i] = Player(role = seamers4_roles[i], price = 2000000, nationality= seamers4_nationalities[i])
+
+for i in range(len(al5)):
+    al5[i] = Player(role = al5_roles[i], price = 2000000, nationality= al5_nationalities[i])
+
+for i in range(len(al6)):
+    al6[i] = Player(role = al6_roles[i], price = 2000000, nationality= al6_nationalities[i])
+
+for i in range(len(uncapped_prospects)):
+    uncapped_prospects[i] = Player(role = uncapped_prospects_roles, price = 2000000, nationality= uncapped_prospects_nationalities[i])
+
+
+
