@@ -187,4 +187,9 @@ for i in range(len(seamers2)):
 
 for i in range(len(spinners2)):
     spinners2[i] = Player(role = spinners2_roles[i], price = 5000000, nationality = spinners2_nationalities[i]) 
+
+for i in range (len(ba3)):
+    ba3[i] = Player(role = ba3_roles[i], price =5000000,nationality = ba3_nationalities[i]) 
+
+for i in range
     
