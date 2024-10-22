@@ -35,7 +35,7 @@ spinners2_nationalities = ["✈️","🛺","🛺","🛺","✈️","🛺","✈️
 spinners2_roles = ["Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler"]
 ba3 = ["Finn Allen","Devon Convay","Alex Hales","Evin Lewis","Chris Lynn","Karun Nair","Rovman Powell","Rassie Van Der Dussen","Najibullah Zadran"]
 ba3_nationalities = ["✈️","✈️","✈️","✈️","✈️","🛺","✈️","✈️"]
-ba3_roles = ["Wicketkeeper","Wicketkeeper","Batter","Batter","Batter","Batter","All Rounder","Batter","Batter",]
+ba3_roles = ["Wicketkeepers","Wicketkeeper","Batter","Batter","Batter","Batter","All Rounder","Batter","Batter",]
 al3 = ["Jofra Archer","Charith Asalanka","Rishi Dhawan","George Garton","Daryl Mitchell","Dwaine Pretorius","Sherfane Rutherford","Daniel Sams","Mitchell Santner","Romario Shepherd"]
 al3_nationalities = ["✈️", "✈️", "🛺", "✈️", "✈️", "✈️", "✈️", "✈️", "✈️", "✈️"]
 al3_roles = ["All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder"]
@@ -191,5 +191,8 @@ for i in range(len(spinners2)):
 for i in range (len(ba3)):
     ba3[i] = Player(role = ba3_roles[i], price =5000000,nationality = ba3_nationalities[i]) 
 
-for i in range
+for i in range(len(al3)) :
+    al3[i] = Player(role = al3_roles[i], price = 5000000,nationality = al3_nationalities[i]) 
+
+for i in range (len
     
