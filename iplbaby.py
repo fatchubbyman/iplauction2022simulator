@@ -153,9 +153,39 @@ class Team:
         
     def decision_making(self,player):
         if player in self.strats:
-            pass
+            if player in self.strats[0]:
+                options = ['bid','no bid']
+                probabilities = [0.7,0.3]
+                result = rd.choices(options,probabilities)
+                if result[0] == 'bid':
+                    self.bid(2000000,player)
+                else:
+                    pass
+            elif player in self.strats[1]:
+                options = ['bid','no bid']
+                probabilities = [0.4,0.6]
+                result = rd.choices(options,probabilities)
+                if result[0] == 'bid':
+                    self.bid(2000000,player)
+                else:
+                    pass
+            elif player in self.strats[2]:
+                options = ['bid','no bid']
+                probabilities = [0.2,0.8]
+                result = rd.choices(options,probabilities)
+                if result[0] == 'bid':
+                    self.bid(2000000,player)
+                else:
+                    pass
         else:
-            pass
+            options = ['bid','no bid']
+            probabilities = [0.1,0.9]
+            result = rd.choices(options,probabilities)
+            if result[0] == 'bid':
+                self.bid(2000000,player)
+            else:
+                pass
+            
     
 
 class Player:
@@ -195,9 +225,13 @@ for i in range(len(teams)):
         rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids)
     elif teams[i] == 'srh':
         srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids)
-def ai():
+        
+        
+        
+        
+def ai(player):
     for i in range(len(teams)):
-        teams[i].decision_making() #this function checks if the player is important and actively bids for the player accordingly
+        teams[i].decision_making(player) #this function checks if the player is important and actively bids for the player accordingly
         pass
     
           
@@ -211,7 +245,7 @@ def bidding(set):
         bid = input("bid? enter to bid/type no to pass")
         if bid == '':
             while act.isSold == False:
-                ai()
+                ai(player = active_player)
                 bid = input("")
                 if bid != '':
                     act.isSold = True
