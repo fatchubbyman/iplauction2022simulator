@@ -129,58 +129,14 @@ medium_bids_srh = ["Bhuvneshwar Kumar","Marco Jansen","Kartik Tyagi","T Nataraja
 meh_bids_srh = ["Sean Abbott","Glenn Phillips","Vishnu Vinod","Fazalhaq Farooqi","Priyam Garg"]
 srh_bids = [top_bids_srh,medium_bids_srh,meh_bids_srh]
 
-csk_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-csk_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-csk_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-csk_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-dc_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-dc_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-dc_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-dc_ai_f_around = ["no","no","no","no","no","no","no","no","bid","bid"] #2/10 based off how bad they want these players
-gt_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-gt_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-gt_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-gt_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players 
-kkr_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-kkr_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-kkr_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-kkr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-lsg_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-lsg_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-lsg_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-lsg_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-mi_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-mi_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-mi_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-mi_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-pbks_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-pbks_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-pbks_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-pbks_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-rr_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-rr_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-rr_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-rr_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-rcb_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-rcb_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-rcb_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-rcb_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-srh_ai_top = ["bid","bid","bid","bid","bid","bid","bid","bid","no","no","no"] #7/10 based off how bad they want these players
-srh_ai_mid = ["bid","bid","bid","bid","no","no","no","no","no","no"] #4/10 based off how bad they want these players
-srh_ai_meh = ["bid","bid","bid","no","no","no","no","no","no","no"] #3/10 based off how bad they want these players
-srh_ai_f_around = ["no","no","no","no","no","no","no","no","no","bid"] #1/10 based off how bad they want these players
-
 teams = ['csk','dc','gt','kkr','lsg','mi','pbks','rr','rcb','srh']
-
-
 
 def wait():
     for j in range(3):
         print(".")
         ti.sleep(0.5)  
         
-        
-        
+          
 class Team:
     def __init__(self,purse,bmen,arounders,bwlrs,overseas,wks,name,strats):
         self.purse = purse
@@ -192,10 +148,15 @@ class Team:
         self.name = name
         self.strats = strats
     
-    def decision_making(self,strats,player):
-        player = player.name
+    def bid(self,amount,player):
+        player.bidding(amount)
         
-        
+    def decision_making(self,player):
+        if player in self.strats:
+            pass
+        else:
+            pass
+    
 
 class Player:
     
@@ -206,15 +167,14 @@ class Player:
         self.nationality = nationality
         self.name = name
 
-    def bid(self,amount=2000000):
+    def bidding(self,amount=2000000):
         self.price += amount
 
-  
-    
 
 your_team = input("What team do you want to play as? ")
 teams.remove(your_team)
 for i in range(len(teams)):
+    
     if teams[i] == 'csk':
         csk = Team(purse=480000000,bmen=1,arounders=2,bwlrs=0,overseas=1,wks=1,name='csk',strats=csk_bids)
     elif teams[i] == 'dc':
@@ -236,11 +196,9 @@ for i in range(len(teams)):
     elif teams[i] == 'srh':
         srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids)
 def ai():
-    for i in range(9):
-        #checking(teams[i]) this function checks if the player is important and actively bids for the player accordingly
+    for i in range(len(teams)):
+        teams[i].decision_making() #this function checks if the player is important and actively bids for the player accordingly
         pass
-
-
     
           
 def bidding(set):
