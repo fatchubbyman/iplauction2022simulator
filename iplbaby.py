@@ -132,7 +132,7 @@ srh_bids = [top_bids_srh,medium_bids_srh,meh_bids_srh]
 teams = ['csk','dc','gt','kkr','lsg','mi','pbks','rr','rcb','srh']
 
 def wait():
-    for j in range(3):
+    for i in range(3):
         print(".")
         ti.sleep(0.5)  
         
@@ -201,37 +201,46 @@ class Player:
         self.price += amount
 
 
-your_team = input("What team do you want to play as? ")
-teams.remove(your_team)
+your_team = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,pbks,rr,rcb,srh) ")
+teams.remove(your_team.lower())
+teams_o = []
 for i in range(len(teams)):
     
     if teams[i] == 'csk':
         csk = Team(purse=480000000,bmen=1,arounders=2,bwlrs=0,overseas=1,wks=1,name='csk',strats=csk_bids)
+        teams_o.append(csk)
     elif teams[i] == 'dc':
         dc = Team(purse=475000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=1,name='dc',strats=dc_bids)
+        teams_o.append(dc)
     elif teams[i] == 'gt':
         gt = Team(purse=598000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='gt',strats=gt_bids)
+        teams_o.append(gt)
     elif teams[i] == 'kkr':
         kkr = Team(purse=480000000,bmen=0,arounders=3,bwlrs=1,overseas=2,wks=0,name='kkr',strats=kkr_bids)
+        teams_o.append(kkr)
     elif teams[i] == 'lsg':
         lsg = Team(purse=598000000,bmen=0,arounders=1,bwlrs=1,overseas=1,wks=1,name='lsg',strats=lsg_bids)
+        teams_o.append(lsg)
     elif teams[i] == 'mi':
         mi = Team(purse=480000000,bmen=2,arounders=1,bwlrs=1,overseas=1,wks=0,name='mi',strats=mi_bids)
+        teams_o.append(mi)
     elif teams[i] == 'pbks':
         pbks = Team(purse=720000000,bmen=1,arounders=0,bwlrs=1,overseas=0,wks=0,name='pbks',strats=pbks_bids)
+        teams_o.append(pbks)
     elif teams[i] == 'rr':
         rr = Team(purse=620000000,bmen=1,arounders=0,bwlrs=0,overseas=1,wks=2,name='rr',strats=rr_bids)
+        teams_o.append(pbks)
     elif teams[i] == 'rcb':
         rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids)
+        teams_o.append(rcb)
     elif teams[i] == 'srh':
         srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids)
+        teams_o.append(srh)
         
-        
-        
-        
+            
 def ai(player):
-    for i in range(len(teams)):
-        teams[i].decision_making(player) #this function checks if the player is important and actively bids for the player accordingly
+    for i in range(len(teams_o)):
+        teams_o[i].decision_making(player) #this function checks if the player is important and actively bids for the player accordingly
         pass
     
           
@@ -246,11 +255,13 @@ def bidding(set):
         if bid == '':
             while act.isSold == False:
                 ai(player = active_player)
-                bid = input("")
-                if bid != '':
-                    act.isSold = True
+                # print the people who bid for the player
+                bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")
+                if bid == '':
+                    continue
                 else:
-                    continue    
+                    act.isSold = True
+                    print(f'{act.name} will be sold to the last bidder at {act.price}')     # need the record of the last bidder
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
