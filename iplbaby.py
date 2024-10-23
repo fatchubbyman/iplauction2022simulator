@@ -1,6 +1,9 @@
 import random as rd
 import time as ti
-import numpy as np
+# i cant get bidding histories yet
+# havent made my_team an object
+# checking which team lastly bid is a problem
+# adding a player into your team, and the other documents
 #                                                                    dataBase
 marquee_names = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
 marquee_nationalities = ["🛺", "✈️", "✈️", "✈️", "🛺", "✈️", "🛺", "✈️", "🛺", "✈️"]
@@ -135,10 +138,15 @@ def wait():
     for i in range(3):
         print(".")
         ti.sleep(0.5)  
+
+def look_around():
+    for i in range(3):
+        print(".")
+        ti.sleep(0.2)  
         
           
 class Team:
-    def __init__(self,purse,bmen,arounders,bwlrs,overseas,wks,name,strats):
+    def __init__(self,purse,bmen,arounders,bwlrs,overseas,wks,name,strats,squad):
         self.purse = purse
         self.bmen = bmen
         self.arounders = arounders
@@ -147,6 +155,7 @@ class Team:
         self.wks = wks
         self.name = name
         self.strats = strats
+        self.squad = []
     
     def bid(self,amount,player):
         player.bidding(amount)
@@ -159,6 +168,8 @@ class Team:
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     self.bid(2000000,player)
+                    print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
+                    look_around()
                 else:
                     pass
             elif player in self.strats[1]:
@@ -167,6 +178,8 @@ class Team:
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     self.bid(2000000,player)
+                    print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
+                    look_around()
                 else:
                     pass
             elif player in self.strats[2]:
@@ -175,6 +188,8 @@ class Team:
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     self.bid(2000000,player)
+                    print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
+                    look_around()
                 else:
                     pass
         else:
@@ -183,9 +198,10 @@ class Team:
             result = rd.choices(options,probabilities)
             if result[0] == 'bid':
                 self.bid(2000000,player)
+                print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
+                look_around()
             else:
                 pass
-            
     
 
 class Player:
@@ -197,9 +213,8 @@ class Player:
         self.nationality = nationality
         self.name = name
 
-    def bidding(self,amount=2000000):
+    def bidding(self,amount):
         self.price += amount
-
 
 your_team = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,pbks,rr,rcb,srh) ")
 teams.remove(your_team.lower())
@@ -242,7 +257,16 @@ def ai(player):
     for i in range(len(teams_o)):
         teams_o[i].decision_making(player) #this function checks if the player is important and actively bids for the player accordingly
         pass
+
+def adding(player):
+    pass
+
+def removing(player,set,index):
+    set[0].remove(player)
+    set[1].remove(set[1][index])
+    set[2].remove(set[2][index])
     
+     
           
 def bidding(set):
     for i in range(len(set)):
@@ -265,9 +289,7 @@ def bidding(set):
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
-        set[0].remove(active_player)
-        set[1].remove(set[1][x])
-        set[2].remove(set[2][x])
+        removing(player=active_player,set=set,index=x)
 
 bidding(marquee)
 bidding(ba1)
