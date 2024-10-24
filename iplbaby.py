@@ -1,7 +1,7 @@
 import random as rd
 import time as ti
 # checking which team lastly bid is a problem
-# if this project is more data driven, or it has machine learning shi than its a decent ass project
+# if this project is more data driven, or it has machine learning shi then its a decent ass project
 #                                                                    dataBase
 marquee_names = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
 marquee_nationalities = ["🛺", "✈️", "✈️", "✈️", "🛺", "✈️", "🛺", "✈️", "🛺", "✈️"]
