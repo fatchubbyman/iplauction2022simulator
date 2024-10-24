@@ -1,9 +1,6 @@
 import random as rd
 import time as ti
-# i cant get bidding histories yet
-# havent made my_team an object
 # checking which team lastly bid is a problem
-# adding a player into your team, and the other documents
 # if this project is more data driven, or it has machine learning shi than its a decent ass project
 #                                                                    dataBase
 marquee_names = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
@@ -260,15 +257,16 @@ for i in range(len(teams_o)):
     if teams_o[i].name == your_team:
         your_team = teams_o[i]
         teams_o.remove(teams_o[i])
+        teams.remove(teams[i])
 
 def ai(player,bids):
     for i in range(len(teams_o)):
         teams_o[i].decision_making(player,bids) #this function checks if the player is important and actively bids for the player accordingly
         pass
 
-def adding(player,team,price):
-    team.squad.append(player)
-    team.purse -= price
+def adding(player,team):
+    team.squad.append(player.name)
+    team.purse -= player.price
     if player.role == 'Batter':
         team.bmen += 1
     elif player.role == 'Wicketkeeper':
@@ -279,7 +277,6 @@ def adding(player,team,price):
         team.arounders += 1
     if player.nationality == "✈️":
         team.overseas += 1
-    
 
 def removing(player,set,index):
     set[0].remove(player)
@@ -303,20 +300,23 @@ def bidding(set):
                     bids[teams[i]] = 'no bid'
                 ai(player = active_player,bids = bids)
                 if bids.values() == checker:
-                    adding(player=active_player,role = act.role,nationality=act.nationality,team = your_team,price = act.price)
-                    pass
+                    adding(player=act,team = your_team)
+                    removing(player=active_player,set=set,index=x)
+                    act.isSold = True
                 else:
                     pass
                 bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")
                 if bid == '':
                     continue
                 else:
+                    print(f'{act.name} will be sold to the (last bidder???) at {act.price}') # need the record of the last bidder
+                    removing(player=active_player,set=set,index=x)
                     act.isSold = True
-                    print(f'{act.name} will be sold to the last bidder at {act.price}')     # need the record of the last bidder
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
-        removing(player=active_player,set=set,index=x)
+            removing(player=active_player,set=set,index=x)
+            act.isSold = True
 
 # executing all the sets
 bidding(marquee)
