@@ -1,7 +1,6 @@
 import random as rd
 import time as ti
-# checking which team lastly bid is a problem
-# if this project is more data driven, or it has machine learning shi then its a decent ass project
+# if this project is more data driven, or it has machine learning shi than its a decent ass project
 #                                                                    dataBase
 marquee_names = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
 marquee_nationalities = ["🛺", "✈️", "✈️", "✈️", "🛺", "✈️", "🛺", "✈️", "🛺", "✈️"]
@@ -219,7 +218,7 @@ class Player:
     def bidding(self,amount):
         self.price += amount
 
-your_team = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,pbks,rr,rcb,srh) ")
+your_team_name = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,pbks,rr,rcb,srh) ")
 teams_o = []         # objects of all teams
 for i in range(len(teams)):
     if teams[i] == 'csk':
@@ -254,8 +253,8 @@ for i in range(len(teams)):
         teams_o.append(srh)     
 
 for i in range(len(teams_o)):
-    if teams_o[i].name == your_team:
-        your_team = teams_o[i]
+    if teams_o[i].name == your_team_name:
+        your_team = teams_o[i]                      # i want to make a object your_team that will function as a team and have everything that teams_o object has
         teams_o.remove(teams_o[i])
         teams.remove(teams[i])
 
@@ -295,23 +294,27 @@ def bidding(set):
         checker = ['no bid','no bid','no bid','no bid','no bid','no bid''no bid','no bid','no bid']  
         if bid == '':
             while act.isSold == False:
-                bids = {}
+                bids = {}                                          # keeps bids inside itself ^ _ ^
                 for i in range(len(teams)):
                     bids[teams[i]] = 'no bid'
-                ai(player = active_player,bids = bids)
-                if bids.values() == checker:
+                ai(player = active_player,bids = bids)             # other 9 teams response
+                if bids.values() == checker:                       # if no one bids for the player, he's yours
                     adding(player=act,team = your_team)
                     removing(player=active_player,set=set,index=x)
+                    print(f'{act.name} has been sold to {your_team.name} for {act.price}! ')
                     act.isSold = True
                 else:
-                    pass
-                bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")
+                    continue
+                bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
                 if bid == '':
                     continue
                 else:
-                    print(f'{act.name} will be sold to the (last bidder???) at {act.price}') # need the record of the last bidder
-                    removing(player=active_player,set=set,index=x)
-                    act.isSold = True
+                    for i in range(len(bids),-1,-1):
+                        if bids.values[i] == 'bid':
+                            bid_winner = bids.keys[i]
+                            print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
+                            removing(player=active_player,set=set,index=x)
+                            act.isSold = True
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
