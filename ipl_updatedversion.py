@@ -129,7 +129,6 @@ medium_bids_srh = ["Bhuvneshwar Kumar","Marco Jansen","Kartik Tyagi","T Nataraja
 meh_bids_srh = ["Sean Abbott","Glenn Phillips","Vishnu Vinod","Fazalhaq Farooqi","Priyam Garg"]
 srh_bids = [top_bids_srh,medium_bids_srh,meh_bids_srh]
 
-teams = ['csk','dc','gt','kkr','lsg','mi','pbks','rr','rcb','srh']
 
 def wait():
     for i in range(3):
@@ -217,7 +216,7 @@ class Player:
 
     def bidding(self,amount):
         self.price += amount
-
+teams = ['csk','dc','gt','kkr','lsg','mi','pbks','rr','rcb','srh']
 your_team_name = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,pbks,rr,rcb,srh) ")
 teams_o = []         # objects of all teams
 for i in range(len(teams)):
@@ -254,9 +253,10 @@ for i in range(len(teams)):
 
 for i in range(len(teams_o)):
     if teams_o[i].name == your_team_name:
-        your_team = teams_o[i]                      # i want to make a object your_team that will function as a team and have everything that teams_o object has
-        teams_o.remove(teams_o[i])
-        teams.remove(teams[i])
+        your_team = teams_o[i] 
+        del teams_o[i]          
+        del teams[i]            
+        break     
 
 def ai(player,bids):
     for i in range(len(teams_o)):
@@ -297,10 +297,10 @@ def bidding(set):
                 bids = {}                                          # keeps bids inside itself ^ _ ^
                 for i in range(len(teams)):
                     bids[teams[i]] = 'no bid'
-                ai(player = act,bids = bids)             # other 9 teams response
+                ai(player = act,bids = bids)                       # other 9 teams response
                 bids_values = list(bids.values())
                 bids_keys = list(bids.keys())
-                if bids_values == checker:                       # if no one bids for the player, he's yours
+                if bids_values == checker:                         # if no one bids for the player, he's yours
                     adding(player=act,team = your_team)
                     removing(player=active_player,set=set,index=x)
                     print(f'{act.name} has been sold to {your_team.name} for {act.price}! ')
