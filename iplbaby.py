@@ -298,7 +298,9 @@ def bidding(set):
                 for i in range(len(teams)):
                     bids[teams[i]] = 'no bid'
                 ai(player = active_player,bids = bids)             # other 9 teams response
-                if bids.values() == checker:                       # if no one bids for the player, he's yours
+                bids_values = list(bids.values())
+                bids_keys = list(bids.keys())
+                if bids_values == checker:                       # if no one bids for the player, he's yours
                     adding(player=act,team = your_team)
                     removing(player=active_player,set=set,index=x)
                     print(f'{act.name} has been sold to {your_team.name} for {act.price}! ')
@@ -310,8 +312,8 @@ def bidding(set):
                     continue
                 else:
                     for i in range(len(bids),-1,-1):
-                        if bids.values[i] == 'bid':
-                            bid_winner = bids.keys[i]
+                        if bids_values[i] == 'bid':
+                            bid_winner = bids_keys[i]
                             print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
                             removing(player=active_player,set=set,index=x)
                             act.isSold = True
