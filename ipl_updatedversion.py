@@ -31,7 +31,7 @@ ba2_nationalities = ["✈️", "✈️", "✈️", "✈️", "✈️", "🛺", "
 ba2_roles = ["Batter","Batter","Batter","Batter","Batter","Batter","Batter","Batter","Batter"]
 ba2 = [ba2_names,ba2_nationalities,ba2_roles,5000000]
 al2_names = ["Dominic Drakes","Shivam Dube","K Gowtham","Marco Jansen","Chris Jordan","Liam Livingstone","James Neesham","Vijay Shankar","Odean Smith","Jayant Yadav"]
-al2_nationalities = ["✈️", "🛺", "🛺", "✈️", "✈️", "✈️", "✈️" "🛺", "✈️","🛺"]
+al2_nationalities = ["✈️", "🛺", "🛺", "✈️", "✈️", "✈️", "✈️", "🛺", "✈️","🛺"]
 al2_roles = ["All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder","All Rounder"]
 al2 = [al2_names,al2_nationalities,al2_roles,5000000]
 wks2_names = ["Liton Das","Niroshan Dickwella","Andre Fletcher","Rahmanullah Gurbaz","Shai Hope","Heinrich Klaasen","Ben Mcdermott","Kusal Mendis","Kusal Perera","Joshua Phillipe","Glenn Phillips","Tim Seifert"]
@@ -243,7 +243,7 @@ for i in range(len(teams)):
         teams_o.append(pbks)
     elif teams[i] == 'rr':
         rr = Team(purse=620000000,bmen=1,arounders=0,bwlrs=0,overseas=1,wks=2,name='rr',strats=rr_bids,squad = ["Sanju Samson","Jos Buttler","Yashasvi Jaiswal"])
-        teams_o.append(pbks)
+        teams_o.append(rr)
     elif teams[i] == 'rcb':
         rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids,squad = ["Virat Kohli","Glenn Maxwell","Mohammed Siraj"])
         teams_o.append(rcb)
@@ -251,12 +251,12 @@ for i in range(len(teams)):
         srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids,squad = ["Kane Williamson","Abdul Samad","Umran Malik"])
         teams_o.append(srh)     
 
-for i in range(len(teams_o)):
+for i in range(len(teams)):
     if teams_o[i].name == your_team_name:
-        your_team = teams_o[i] 
-        del teams_o[i]          
-        del teams[i]            
-        break     
+        your_team = teams_o[i]                      # i want to make a object your_team that will function as a team and have everything that teams_o object has
+        teams_o.remove(teams_o[i])
+        teams.remove(teams[i])
+        break
 
 def ai(player,bids):
     for i in range(len(teams_o)):
@@ -290,7 +290,7 @@ def bidding(set):
         act = Player(name=active_player,role=set[2][x],nationality=set[1][x],price=set[3])
         print(f'It\'s {act.name} from {act.nationality}  starting at ₹{act.price} please? ')
         wait()
-        bid = input("bid? enter to bid/type no to pass")
+        bid = input("bid? enter to bid/type no to pass ")
         checker = ['no bid','no bid','no bid','no bid','no bid','no bid''no bid','no bid','no bid']  
         if bid == '':
             while act.isSold == False:
@@ -305,23 +305,24 @@ def bidding(set):
                     removing(player=active_player,set=set,index=x)
                     print(f'{act.name} has been sold to {your_team.name} for {act.price}! ')
                     act.isSold = True
+                    break
                 else:
-                    continue
-                bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
-                if bid == '':
-                    continue
-                else:
-                    for i in range(len(bids),-1,-1):
-                        if bids_values[i] == 'bid':
-                            bid_winner = bids_keys[i]
-                            print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
-                            removing(player=active_player,set=set,index=x)
-                            act.isSold = True
+                    bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
+                    if bid == '':
+                        continue
+                    else:
+                        for i in range(len(bids)-1,-1,-1):
+                            if bids_values[i] == 'bid':
+                                bid_winner = bids_keys[i]
+                                print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
+                                removing(player=active_player,set=set,index=x)
+                                act.isSold = True
+                                break
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
             removing(player=active_player,set=set,index=x)
-            act.isSold = True
+            break
 
 # executing all the sets
 bidding(marquee)
