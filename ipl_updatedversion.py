@@ -285,10 +285,10 @@ def removing(player,set,index):
           
 def bidding(set):
     for i in range(len(set)):
-        active_player = rd.choice(set)
+        active_player = rd.choice(set[0])
         x = set[0].index(active_player)
         act = Player(name=active_player,role=set[2][x],nationality=set[1][x],price=set[3])
-        print(f'It\'s {act.name} from {act.nationality} starting at ₹{act.price} please? ')
+        print(f'It\'s {act.name} from {act.nationality}  starting at ₹{act.price} please? ')
         wait()
         bid = input("bid? enter to bid/type no to pass")
         checker = ['no bid','no bid','no bid','no bid','no bid','no bid''no bid','no bid','no bid']  
@@ -297,7 +297,7 @@ def bidding(set):
                 bids = {}                                          # keeps bids inside itself ^ _ ^
                 for i in range(len(teams)):
                     bids[teams[i]] = 'no bid'
-                ai(player = active_player,bids = bids)             # other 9 teams response
+                ai(player = act,bids = bids)             # other 9 teams response
                 bids_values = list(bids.values())
                 bids_keys = list(bids.keys())
                 if bids_values == checker:                       # if no one bids for the player, he's yours
