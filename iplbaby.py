@@ -4,6 +4,7 @@ import time as ti
 # havent made my_team an object
 # checking which team lastly bid is a problem
 # adding a player into your team, and the other documents
+# if this project is more data driven, or it has machine learning shi than its a decent ass project
 #                                                                    dataBase
 marquee_names = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
 marquee_nationalities = ["🛺", "✈️", "✈️", "✈️", "🛺", "✈️", "🛺", "✈️", "🛺", "✈️"]
@@ -146,6 +147,7 @@ def look_around():
         
           
 class Team:
+    squad = []
     def __init__(self,purse,bmen,arounders,bwlrs,overseas,wks,name,strats,squad):
         self.purse = purse
         self.bmen = bmen
@@ -155,18 +157,19 @@ class Team:
         self.wks = wks
         self.name = name
         self.strats = strats
-        self.squad = []
+        self.squad = squad
     
     def bid(self,amount,player):
         player.bidding(amount)
         
-    def decision_making(self,player):
+    def decision_making(self,player,bids):
         if player in self.strats:
             if player in self.strats[0]:
                 options = ['bid','no bid']
                 probabilities = [0.7,0.3]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
+                    bids[self.name] = 'bid'
                     self.bid(2000000,player)
                     print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
                     look_around()
@@ -177,6 +180,7 @@ class Team:
                 probabilities = [0.4,0.6]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
+                    bids[self.name] = 'bid'
                     self.bid(2000000,player)
                     print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
                     look_around()
@@ -187,6 +191,7 @@ class Team:
                 probabilities = [0.2,0.8]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
+                    bids[self.name] = 'bid'
                     self.bid(2000000,player)
                     print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
                     look_around()
@@ -197,6 +202,7 @@ class Team:
             probabilities = [0.1,0.9]
             result = rd.choices(options,probabilities)
             if result[0] == 'bid':
+                bids[self.name] = 'bid'
                 self.bid(2000000,player)
                 print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
                 look_around()
@@ -217,56 +223,69 @@ class Player:
         self.price += amount
 
 your_team = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,pbks,rr,rcb,srh) ")
-teams.remove(your_team.lower())
-teams_o = []
+teams_o = []         # objects of all teams
 for i in range(len(teams)):
-    
     if teams[i] == 'csk':
-        csk = Team(purse=480000000,bmen=1,arounders=2,bwlrs=0,overseas=1,wks=1,name='csk',strats=csk_bids)
+        csk = Team(purse=480000000,bmen=1,arounders=2,bwlrs=0,overseas=1,wks=1,name='csk',strats=csk_bids,squad =["Ravindra Jadeja","MS Dhoni","Moeen Ali","Ruturaj Gaikwad"])
         teams_o.append(csk)
     elif teams[i] == 'dc':
-        dc = Team(purse=475000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=1,name='dc',strats=dc_bids)
+        dc = Team(purse=475000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=1,name='dc',strats=dc_bids,squad = ["Rishabh Pant","Axar Patel","Prithvi Shaw","Anrich Nortje"])
         teams_o.append(dc)
     elif teams[i] == 'gt':
-        gt = Team(purse=598000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='gt',strats=gt_bids)
+        gt = Team(purse=598000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='gt',strats=gt_bids,squad = ["Shubman Gill","Hardik Pandya","Rashid Khan"])
         teams_o.append(gt)
     elif teams[i] == 'kkr':
-        kkr = Team(purse=480000000,bmen=0,arounders=3,bwlrs=1,overseas=2,wks=0,name='kkr',strats=kkr_bids)
+        kkr = Team(purse=480000000,bmen=0,arounders=3,bwlrs=1,overseas=2,wks=0,name='kkr',strats=kkr_bids,squad = ["Andre Russell","Varun Chakravarthy","Venkatesh Iyer","Sunil Narine"])
         teams_o.append(kkr)
     elif teams[i] == 'lsg':
-        lsg = Team(purse=598000000,bmen=0,arounders=1,bwlrs=1,overseas=1,wks=1,name='lsg',strats=lsg_bids)
+        lsg = Team(purse=598000000,bmen=0,arounders=1,bwlrs=1,overseas=1,wks=1,name='lsg',strats=lsg_bids,squad = ["KL Rahul","Marcus Stoinis","Ravi Bishnoi"])
         teams_o.append(lsg)
     elif teams[i] == 'mi':
-        mi = Team(purse=480000000,bmen=2,arounders=1,bwlrs=1,overseas=1,wks=0,name='mi',strats=mi_bids)
+        mi = Team(purse=480000000,bmen=2,arounders=1,bwlrs=1,overseas=1,wks=0,name='mi',strats=mi_bids,squad = ["Rohit Sharma","Jasprit Bumrah","Suryakumar Yadav","Kieron Pollard"])
         teams_o.append(mi)
     elif teams[i] == 'pbks':
-        pbks = Team(purse=720000000,bmen=1,arounders=0,bwlrs=1,overseas=0,wks=0,name='pbks',strats=pbks_bids)
+        pbks = Team(purse=720000000,bmen=1,arounders=0,bwlrs=1,overseas=0,wks=0,name='pbks',strats=pbks_bids,squad = ["Mayank Agarwal","Arshdeep Singh"])
         teams_o.append(pbks)
     elif teams[i] == 'rr':
-        rr = Team(purse=620000000,bmen=1,arounders=0,bwlrs=0,overseas=1,wks=2,name='rr',strats=rr_bids)
+        rr = Team(purse=620000000,bmen=1,arounders=0,bwlrs=0,overseas=1,wks=2,name='rr',strats=rr_bids,squad = ["Sanju Samson","Jos Buttler","Yashasvi Jaiswal"])
         teams_o.append(pbks)
     elif teams[i] == 'rcb':
-        rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids)
+        rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids,squad = ["Virat Kohli","Glenn Maxwell","Mohammed Siraj"])
         teams_o.append(rcb)
     elif teams[i] == 'srh':
-        srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids)
-        teams_o.append(srh)
-        
-            
-def ai(player):
+        srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids,squad = ["Kane Williamson","Abdul Samad","Umran Malik"])
+        teams_o.append(srh)     
+
+for i in range(len(teams_o)):
+    if teams_o[i].name == your_team:
+        your_team = teams_o[i]
+        teams_o.remove(teams_o[i])
+
+def ai(player,bids):
     for i in range(len(teams_o)):
-        teams_o[i].decision_making(player) #this function checks if the player is important and actively bids for the player accordingly
+        teams_o[i].decision_making(player,bids) #this function checks if the player is important and actively bids for the player accordingly
         pass
 
-def adding(player):
-    pass
+def adding(player,team,price):
+    team.squad.append(player)
+    team.purse -= price
+    if player.role == 'Batter':
+        team.bmen += 1
+    elif player.role == 'Wicketkeeper':
+        team.wks += 1
+    elif player.role == 'Bowler':
+        team.bwlrs += 1
+    elif player.role == 'All Rounder':
+        team.arounders += 1
+    if player.nationality == "✈️":
+        team.overseas += 1
+    
 
 def removing(player,set,index):
     set[0].remove(player)
     set[1].remove(set[1][index])
     set[2].remove(set[2][index])
-    
-     
+      
           
 def bidding(set):
     for i in range(len(set)):
@@ -276,10 +295,18 @@ def bidding(set):
         print(f'It\'s {act.name} from {act.nationality} starting at ₹{act.price} please? ')
         wait()
         bid = input("bid? enter to bid/type no to pass")
+        checker = ['no bid','no bid','no bid','no bid','no bid','no bid''no bid','no bid','no bid']  
         if bid == '':
             while act.isSold == False:
-                ai(player = active_player)
-                # print the people who bid for the player
+                bids = {}
+                for i in range(len(teams)):
+                    bids[teams[i]] = 'no bid'
+                ai(player = active_player,bids = bids)
+                if bids.values() == checker:
+                    adding(player=active_player,role = act.role,nationality=act.nationality,team = your_team,price = act.price)
+                    pass
+                else:
+                    pass
                 bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")
                 if bid == '':
                     continue
@@ -291,6 +318,7 @@ def bidding(set):
             print(f"{act.name} will remain unsold!, next player please!")
         removing(player=active_player,set=set,index=x)
 
+# executing all the sets
 bidding(marquee)
 bidding(ba1)
 bidding(al1)
@@ -316,4 +344,4 @@ bidding(uncapped_prospects)
 
             
             
-    
+     
