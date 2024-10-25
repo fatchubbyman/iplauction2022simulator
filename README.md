@@ -1,5 +1,4 @@
-(this program is incomplete), i am still learning how to code and run this in a shorter way, using objects and classes
-using random to use probability and the probability depends upon the teams interests regarding players in the auction that year
 # data from iplt20.com
 https://documents.iplt20.com/documents/IPL/document/2022/02/IPL2022PlayerAuction_List_Sets.pdf
-VERY MESSY, I WILL COME BACK WHEN I KNOW HOW TO FIX EVERYTHING
+the objective of the game is to get as close to the top 15 players actually bought by the team you picked in the tata ipl 2022 auction, you will be scored out of 15
+thank you for your time
