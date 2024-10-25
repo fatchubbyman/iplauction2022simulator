@@ -1,6 +1,7 @@
 import random as rd
 import time as ti
 # if this project is more data driven, or it has machine learning shi than its a decent ass project
+# probabilites need to be tweaked and the other statements can be made better(cosmetics only)
 #                                                                    dataBase
 marquee_names = ["R Ashwin", "Trent Boult", "Pat Cummins", "Quinton De Kock", "Shikhar Dhawan", "Faf Du Plessis", "Shreyas Iyer", "Kagiso Rabada", "Mohammad Shami", "David Warner"]
 marquee_nationalities = ["🛺", "✈️", "✈️", "✈️", "🛺", "✈️", "🛺", "✈️", "🛺", "✈️"]
