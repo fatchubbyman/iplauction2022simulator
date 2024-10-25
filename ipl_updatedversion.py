@@ -139,7 +139,7 @@ def look_around():
     for i in range(3):
         print(".")
         ti.sleep(0.2)  
-        
+
           
 class Team:
     squad = []
@@ -291,7 +291,7 @@ def bidding(set):
         print(f'It\'s {act.name} from {act.nationality}  starting at ₹{act.price} please? ')
         wait()
         bid = input("bid? enter to bid/type no to pass ")
-        checker = ['no bid','no bid','no bid','no bid','no bid','no bid''no bid','no bid','no bid']  
+        checker = ['no bid']*len(teams)  
         if bid == '':
             while act.isSold == False:
                 bids = {}                                          # keeps bids inside itself ^ _ ^
@@ -299,7 +299,6 @@ def bidding(set):
                     bids[teams[i]] = 'no bid'
                 ai(player = act,bids = bids)                       # other 9 teams response
                 bids_values = list(bids.values())
-                bids_keys = list(bids.keys())
                 if bids_values == checker:                         # if no one bids for the player, he's yours
                     adding(player=act,team = your_team)
                     removing(player=active_player,set=set,index=x)
@@ -313,7 +312,7 @@ def bidding(set):
                     else:
                         for i in range(len(bids)-1,-1,-1):
                             if bids_values[i] == 'bid':
-                                bid_winner = bids_keys[i]
+                                bid_winner = list(bids.keys())[i]
                                 print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
                                 removing(player=active_player,set=set,index=x)
                                 act.isSold = True
