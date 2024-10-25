@@ -166,7 +166,7 @@ class Team:
                 if result[0] == 'bid':
                     bids[self.name] = 'bid'
                     self.bid(2000000,player)
-                    print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
+                    print(f'{self.name} has raised the bid by 20 lakh!,{player.pric.loe+2000000} please?')
                     look_around()
                 else:
                     pass
@@ -257,7 +257,8 @@ for i in range(len(teams)):
         teams_o.remove(teams_o[i])
         teams.remove(teams[i])
         break
-
+wait()
+print(f'Your team consists of{your_team.squad}')
 def ai(player,bids):
     for i in range(len(teams_o)):
         teams_o[i].decision_making(player,bids) #this function checks if the player is important and actively bids for the player accordingly
@@ -284,7 +285,8 @@ def removing(player,set,index):
       
           
 def bidding(set):
-    for i in range(len(set)):
+    y = len(set)
+    for i in range(y):
         active_player = rd.choice(set[0])
         x = set[0].index(active_player)
         act = Player(name=active_player,role=set[2][x],nationality=set[1][x],price=set[3])
@@ -303,8 +305,9 @@ def bidding(set):
                     adding(player=act,team = your_team)
                     removing(player=active_player,set=set,index=x)
                     print(f'{act.name} has been sold to {your_team.name} for {act.price}! ')
+                    print(your_team.squad)
                     act.isSold = True
-                    break
+                    
                 else:
                     bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
                     wait()
@@ -317,12 +320,13 @@ def bidding(set):
                                 print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
                                 removing(player=active_player,set=set,index=x)
                                 act.isSold = True
-                                break
+                                
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
             removing(player=active_player,set=set,index=x)
-            break
+            
+    
 
 # executing all the sets
 bidding(marquee)
@@ -345,7 +349,8 @@ bidding(al4)
 bidding(seamers4)
 bidding(al5)
 bidding(al6)
-bidding(uncapped_prospects)            
+bidding(uncapped_prospects)      
+            
             
 
             
