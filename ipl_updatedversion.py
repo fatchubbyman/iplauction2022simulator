@@ -307,6 +307,7 @@ def bidding(set):
                     break
                 else:
                     bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
+                    wait()
                     if bid == '':
                         continue
                     else:
