@@ -89,66 +89,16 @@ uncapped_prospects = [uncapped_prospects_names,uncapped_prospects_nationalities,
 
 # for the scoring
 
-rcb_players = [
-    "Virat Kohli", "Glenn Maxwell", "Harshal Patel", "Wanindu Hasaranga",
-    "Josh Hazlewood", "Faf du Plessis", "Mohammed Siraj", "Dinesh Karthik",
-    "Anuj Rawat", "Shahbaz Ahmed", "David Willey", "Sherfane Rutherford",
-    "Mahipal Lomror", "Finn Allen", "Jason Behrendorff"
-]
-kkr_players = [
-    "Shreyas Iyer", "Andre Russell", "Varun Chakravarthy", "Nitish Rana",
-    "Venkatesh Iyer", "Shivam Mavi", "Pat Cummins", "Sunil Narine",
-    "Sam Billings", "Umesh Yadav", "Tim Southee", "Alex Hales",
-    "Abhijeet Tomar", "Ajinkya Rahane", "Sheldon Jackson"
-]
-pbks_players = [
-    "Mayank Agarwal", "Liam Livingstone", "Kagiso Rabada", "Shahrukh Khan",
-    "Shikhar Dhawan", "Jonny Bairstow", "Odean Smith", "Rahul Chahar",
-    "Arshdeep Singh", "Harpreet Brar", "Vaibhav Arora", "Raj Angad Bawa",
-    "Nathan Ellis", "Prabhsimran Singh", "Rishi Dhawan"
-]
-csk_players = [
-    "Ravindra Jadeja", "Deepak Chahar", "MS Dhoni", "Moeen Ali",
-    "Ambati Rayudu", "Ruturaj Gaikwad", "Dwayne Bravo", "Shivam Dube",
-    "Chris Jordan", "Robin Uthappa", "Adam Milne", "Mitchell Santner",
-    "Rajvardhan Hangargekar", "Prashant Solanki", "Devon Conway"
-]
-dc_players = [
-    "Rishabh Pant", "Shardul Thakur", "Axar Patel", "Prithvi Shaw",
-    "Mitchell Marsh", "Anrich Nortje", "David Warner", "Khaleel Ahmed",
-    "Chetan Sakariya", "Rovman Powell", "Mustafizur Rahman", "KS Bharat",
-    "Kuldeep Yadav", "Kamlesh Nagarkoti", "Mandeep Singh"
-]
-rr_players = [
-    "Sanju Samson", "Jos Buttler", "Prasidh Krishna", "Shimron Hetmyer",
-    "Trent Boult", "Devdutt Padikkal", "Yuzvendra Chahal", "R Ashwin",
-    "Yashasvi Jaiswal", "Navdeep Saini", "Nathan Coulter-Nile", "James Neesham",
-    "Karun Nair", "Rassie van der Dussen", "Daryl Mitchell"
-]
-mi_players = [
-    "Rohit Sharma", "Ishan Kishan", "Jasprit Bumrah", "Tim David",
-    "Suryakumar Yadav", "Jofra Archer", "Kieron Pollard", "Dewald Brevis",
-    "Daniel Sams", "Tilak Varma", "M Ashwin", "Tymal Mills",
-    "Jaydev Unadkat", "Riley Meredith", "Fabian Allen"
-]
-srh_players = [
-    "Kane Williamson", "Nicholas Pooran", "Washington Sundar", "Rahul Tripathi",
-    "Romario Shepherd", "Abhishek Sharma", "Bhuvneshwar Kumar", "Marco Jansen",
-    "Kartik Tyagi", "Abdul Samad", "T Natarajan", "Aiden Markram",
-    "Sean Abbott", "Glenn Phillips", "Shreyas Gopal"
-]
-lsg_players = [
-    "KL Rahul", "Avesh Khan", "Marcus Stoinis", "Jason Holder",
-    "Krunal Pandya", "Mark Wood", "Quinton de Kock", "Deepak Hooda",
-    "Manish Pandey", "Ravi Bishnoi", "Evin Lewis", "Dushmantha Chameera",
-    "K Gowtham", "Shahbaz Nadeem", "Kyle Mayers"
-]
-gt_players = [
-    "Hardik Pandya", "Rashid Khan", "Lockie Ferguson", "Rahul Tewatia",
-    "Shubman Gill", "Mohammed Shami", "Yash Dayal", "R Sai Kishore",
-    "David Miller", "Abhinav Manohar", "Matthew Wade", "Alzarri Joseph",
-    "Jason Roy", "Wriddhiman Saha", "Jayant Yadav"
-]
+rcb_players = ["Virat Kohli", "Glenn Maxwell", "Harshal Patel", "Wanindu Hasaranga", "Josh Hazlewood", "Faf du Plessis", "Mohammed Siraj", "Dinesh Karthik", "Anuj Rawat", "Shahbaz Ahmed", "David Willey", "Sherfane Rutherford", "Mahipal Lomror", "Finn Allen", "Jason Behrendorff"]
+kkr_players = ["Shreyas Iyer", "Andre Russell", "Varun Chakravarthy", "Nitish Rana", "Venkatesh Iyer", "Shivam Mavi", "Pat Cummins", "Sunil Narine", "Sam Billings", "Umesh Yadav", "Tim Southee", "Alex Hales", "Abhijeet Tomar", "Ajinkya Rahane", "Sheldon Jackson"]
+pbks_players = ["Mayank Agarwal", "Liam Livingstone", "Kagiso Rabada", "Shahrukh Khan", "Shikhar Dhawan", "Jonny Bairstow", "Odean Smith", "Rahul Chahar", "Arshdeep Singh", "Harpreet Brar", "Vaibhav Arora", "Raj Angad Bawa", "Nathan Ellis", "Prabhsimran Singh", "Rishi Dhawan"]
+csk_players = ["Ravindra Jadeja", "Deepak Chahar", "MS Dhoni", "Moeen Ali", "Ambati Rayudu", "Ruturaj Gaikwad", "Dwayne Bravo", "Shivam Dube", "Chris Jordan", "Robin Uthappa", "Adam Milne", "Mitchell Santner", "Rajvardhan Hangargekar", "Prashant Solanki", "Devon Conway"]
+dc_players = ["Rishabh Pant", "Shardul Thakur", "Axar Patel", "Prithvi Shaw", "Mitchell Marsh", "Anrich Nortje", "David Warner", "Khaleel Ahmed", "Chetan Sakariya", "Rovman Powell", "Mustafizur Rahman", "KS Bharat", "Kuldeep Yadav", "Kamlesh Nagarkoti", "Mandeep Singh"]
+rr_players = ["Sanju Samson", "Jos Buttler", "Prasidh Krishna", "Shimron Hetmyer", "Trent Boult", "Devdutt Padikkal", "Yuzvendra Chahal", "R Ashwin", "Yashasvi Jaiswal", "Navdeep Saini", "Nathan Coulter-Nile", "James Neesham", "Karun Nair", "Rassie van der Dussen", "Daryl Mitchell"]
+mi_players = ["Rohit Sharma", "Ishan Kishan", "Jasprit Bumrah", "Tim David", "Suryakumar Yadav", "Jofra Archer", "Kieron Pollard", "Dewald Brevis", "Daniel Sams", "Tilak Varma", "M Ashwin", "Tymal Mills", "Jaydev Unadkat", "Riley Meredith", "Fabian Allen"]
+srh_players = ["Kane Williamson", "Nicholas Pooran", "Washington Sundar", "Rahul Tripathi", "Romario Shepherd", "Abhishek Sharma", "Bhuvneshwar Kumar", "Marco Jansen", "Kartik Tyagi", "Abdul Samad", "T Natarajan", "Aiden Markram", "Sean Abbott", "Glenn Phillips", "Shreyas Gopal"]
+lsg_players = ["KL Rahul", "Avesh Khan", "Marcus Stoinis", "Jason Holder", "Krunal Pandya", "Mark Wood", "Quinton de Kock", "Deepak Hooda", "Manish Pandey", "Ravi Bishnoi", "Evin Lewis", "Dushmantha Chameera", "K Gowtham", "Shahbaz Nadeem", "Kyle Mayers"]
+gt_players = ["Hardik Pandya", "Rashid Khan", "Lockie Ferguson", "Rahul Tewatia", "Shubman Gill", "Mohammed Shami", "Yash Dayal", "R Sai Kishore", "David Miller", "Abhinav Manohar", "Matthew Wade", "Alzarri Joseph", "Jason Roy", "Wriddhiman Saha", "Jayant Yadav"]
 
 top_bids_csk = ["Deepak Chahar","Ambati Rayudu"]
 medium_bids_csk = ["Dwayne Bravo","Shivam Dube","Chris Jordan"]
