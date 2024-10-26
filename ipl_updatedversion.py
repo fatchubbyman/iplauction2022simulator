@@ -87,6 +87,68 @@ uncapped_prospects_nationalities = ["✈️", "🛺", "🛺", "🛺", "🛺", "�
 uncapped_prospects_roles = ["Batter","Batter","Batter","Batter","Batter","All Rounder","All Rounder","All Rounder","Batter","Batter","Bowler","Bowler","All Rounder","All Rounder","All Rounder","Wicketkeeper","Wicketkeeper","Wicketkeeper","Wicketkeeper","Wicketkeeper","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Bowler","Batter","Bowler","All Rounder"]
 uncapped_prospects = [uncapped_prospects_names,uncapped_prospects_nationalities,uncapped_prospects_roles,2000000]
 
+# for the scoring
+
+rcb_players = [
+    "Virat Kohli", "Glenn Maxwell", "Harshal Patel", "Wanindu Hasaranga",
+    "Josh Hazlewood", "Faf du Plessis", "Mohammed Siraj", "Dinesh Karthik",
+    "Anuj Rawat", "Shahbaz Ahmed", "David Willey", "Sherfane Rutherford",
+    "Mahipal Lomror", "Finn Allen", "Jason Behrendorff"
+]
+kkr_players = [
+    "Shreyas Iyer", "Andre Russell", "Varun Chakravarthy", "Nitish Rana",
+    "Venkatesh Iyer", "Shivam Mavi", "Pat Cummins", "Sunil Narine",
+    "Sam Billings", "Umesh Yadav", "Tim Southee", "Alex Hales",
+    "Abhijeet Tomar", "Ajinkya Rahane", "Sheldon Jackson"
+]
+pbks_players = [
+    "Mayank Agarwal", "Liam Livingstone", "Kagiso Rabada", "Shahrukh Khan",
+    "Shikhar Dhawan", "Jonny Bairstow", "Odean Smith", "Rahul Chahar",
+    "Arshdeep Singh", "Harpreet Brar", "Vaibhav Arora", "Raj Angad Bawa",
+    "Nathan Ellis", "Prabhsimran Singh", "Rishi Dhawan"
+]
+csk_players = [
+    "Ravindra Jadeja", "Deepak Chahar", "MS Dhoni", "Moeen Ali",
+    "Ambati Rayudu", "Ruturaj Gaikwad", "Dwayne Bravo", "Shivam Dube",
+    "Chris Jordan", "Robin Uthappa", "Adam Milne", "Mitchell Santner",
+    "Rajvardhan Hangargekar", "Prashant Solanki", "Devon Conway"
+]
+dc_players = [
+    "Rishabh Pant", "Shardul Thakur", "Axar Patel", "Prithvi Shaw",
+    "Mitchell Marsh", "Anrich Nortje", "David Warner", "Khaleel Ahmed",
+    "Chetan Sakariya", "Rovman Powell", "Mustafizur Rahman", "KS Bharat",
+    "Kuldeep Yadav", "Kamlesh Nagarkoti", "Mandeep Singh"
+]
+rr_players = [
+    "Sanju Samson", "Jos Buttler", "Prasidh Krishna", "Shimron Hetmyer",
+    "Trent Boult", "Devdutt Padikkal", "Yuzvendra Chahal", "R Ashwin",
+    "Yashasvi Jaiswal", "Navdeep Saini", "Nathan Coulter-Nile", "James Neesham",
+    "Karun Nair", "Rassie van der Dussen", "Daryl Mitchell"
+]
+mi_players = [
+    "Rohit Sharma", "Ishan Kishan", "Jasprit Bumrah", "Tim David",
+    "Suryakumar Yadav", "Jofra Archer", "Kieron Pollard", "Dewald Brevis",
+    "Daniel Sams", "Tilak Varma", "M Ashwin", "Tymal Mills",
+    "Jaydev Unadkat", "Riley Meredith", "Fabian Allen"
+]
+srh_players = [
+    "Kane Williamson", "Nicholas Pooran", "Washington Sundar", "Rahul Tripathi",
+    "Romario Shepherd", "Abhishek Sharma", "Bhuvneshwar Kumar", "Marco Jansen",
+    "Kartik Tyagi", "Abdul Samad", "T Natarajan", "Aiden Markram",
+    "Sean Abbott", "Glenn Phillips", "Shreyas Gopal"
+]
+lsg_players = [
+    "KL Rahul", "Avesh Khan", "Marcus Stoinis", "Jason Holder",
+    "Krunal Pandya", "Mark Wood", "Quinton de Kock", "Deepak Hooda",
+    "Manish Pandey", "Ravi Bishnoi", "Evin Lewis", "Dushmantha Chameera",
+    "K Gowtham", "Shahbaz Nadeem", "Kyle Mayers"
+]
+gt_players = [
+    "Hardik Pandya", "Rashid Khan", "Lockie Ferguson", "Rahul Tewatia",
+    "Shubman Gill", "Mohammed Shami", "Yash Dayal", "R Sai Kishore",
+    "David Miller", "Abhinav Manohar", "Matthew Wade", "Alzarri Joseph",
+    "Jason Roy", "Wriddhiman Saha", "Jayant Yadav"
+]
 
 top_bids_csk = ["Deepak Chahar","Ambati Rayudu"]
 medium_bids_csk = ["Dwayne Bravo","Shivam Dube","Chris Jordan"]
@@ -143,7 +205,7 @@ def look_around():
           
 class Team:
     squad = []
-    def __init__(self,purse,bmen,arounders,bwlrs,overseas,wks,name,strats,squad):
+    def __init__(self,purse,bmen,arounders,bwlrs,overseas,wks,name,strats,squad,bought):
         self.purse = purse
         self.bmen = bmen
         self.arounders = arounders
@@ -153,6 +215,7 @@ class Team:
         self.name = name
         self.strats = strats
         self.squad = squad
+        self.bought = bought
     
     def bid(self,amount,player):
         player.bidding(amount)
@@ -221,34 +284,34 @@ your_team_name = input("What team do you want to play as?(csk,dc,gt,kkr,lsg,mi,p
 teams_o = []         # objects of all teams
 for i in range(len(teams)):
     if teams[i] == 'csk':
-        csk = Team(purse=480000000,bmen=1,arounders=2,bwlrs=0,overseas=1,wks=1,name='csk',strats=csk_bids,squad =["Ravindra Jadeja","MS Dhoni","Moeen Ali","Ruturaj Gaikwad"])
+        csk = Team(purse=480000000,bmen=1,arounders=2,bwlrs=0,overseas=1,wks=1,name='csk',strats=csk_bids,squad =["Ravindra Jadeja","MS Dhoni","Moeen Ali","Ruturaj Gaikwad"],bought=csk_players)
         teams_o.append(csk)
     elif teams[i] == 'dc':
-        dc = Team(purse=475000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=1,name='dc',strats=dc_bids,squad = ["Rishabh Pant","Axar Patel","Prithvi Shaw","Anrich Nortje"])
+        dc = Team(purse=475000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=1,name='dc',strats=dc_bids,squad = ["Rishabh Pant","Axar Patel","Prithvi Shaw","Anrich Nortje"],bought=dc_players)
         teams_o.append(dc)
     elif teams[i] == 'gt':
-        gt = Team(purse=598000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='gt',strats=gt_bids,squad = ["Shubman Gill","Hardik Pandya","Rashid Khan"])
+        gt = Team(purse=598000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='gt',strats=gt_bids,squad = ["Shubman Gill","Hardik Pandya","Rashid Khan"],bought= gt_players)
         teams_o.append(gt)
     elif teams[i] == 'kkr':
-        kkr = Team(purse=480000000,bmen=0,arounders=3,bwlrs=1,overseas=2,wks=0,name='kkr',strats=kkr_bids,squad = ["Andre Russell","Varun Chakravarthy","Venkatesh Iyer","Sunil Narine"])
+        kkr = Team(purse=480000000,bmen=0,arounders=3,bwlrs=1,overseas=2,wks=0,name='kkr',strats=kkr_bids,squad = ["Andre Russell","Varun Chakravarthy","Venkatesh Iyer","Sunil Narine"],bought=kkr_players)
         teams_o.append(kkr)
     elif teams[i] == 'lsg':
-        lsg = Team(purse=598000000,bmen=0,arounders=1,bwlrs=1,overseas=1,wks=1,name='lsg',strats=lsg_bids,squad = ["KL Rahul","Marcus Stoinis","Ravi Bishnoi"])
+        lsg = Team(purse=598000000,bmen=0,arounders=1,bwlrs=1,overseas=1,wks=1,name='lsg',strats=lsg_bids,squad = ["KL Rahul","Marcus Stoinis","Ravi Bishnoi"],bought=lsg_players)
         teams_o.append(lsg)
     elif teams[i] == 'mi':
-        mi = Team(purse=480000000,bmen=2,arounders=1,bwlrs=1,overseas=1,wks=0,name='mi',strats=mi_bids,squad = ["Rohit Sharma","Jasprit Bumrah","Suryakumar Yadav","Kieron Pollard"])
+        mi = Team(purse=480000000,bmen=2,arounders=1,bwlrs=1,overseas=1,wks=0,name='mi',strats=mi_bids,squad = ["Rohit Sharma","Jasprit Bumrah","Suryakumar Yadav","Kieron Pollard"],bought= mi_players)
         teams_o.append(mi)
     elif teams[i] == 'pbks':
-        pbks = Team(purse=720000000,bmen=1,arounders=0,bwlrs=1,overseas=0,wks=0,name='pbks',strats=pbks_bids,squad = ["Mayank Agarwal","Arshdeep Singh"])
+        pbks = Team(purse=720000000,bmen=1,arounders=0,bwlrs=1,overseas=0,wks=0,name='pbks',strats=pbks_bids,squad = ["Mayank Agarwal","Arshdeep Singh"], bought= pbks_players)
         teams_o.append(pbks)
     elif teams[i] == 'rr':
-        rr = Team(purse=620000000,bmen=1,arounders=0,bwlrs=0,overseas=1,wks=2,name='rr',strats=rr_bids,squad = ["Sanju Samson","Jos Buttler","Yashasvi Jaiswal"])
+        rr = Team(purse=620000000,bmen=1,arounders=0,bwlrs=0,overseas=1,wks=2,name='rr',strats=rr_bids,squad = ["Sanju Samson","Jos Buttler","Yashasvi Jaiswal"], bought = rr_players)
         teams_o.append(rr)
     elif teams[i] == 'rcb':
-        rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids,squad = ["Virat Kohli","Glenn Maxwell","Mohammed Siraj"])
+        rcb = Team(purse=570000000,bmen=1,arounders=1,bwlrs=1,overseas=1,wks=0,name='rcb',strats=rcb_bids,squad = ["Virat Kohli","Glenn Maxwell","Mohammed Siraj"], bought = rcb_players)
         teams_o.append(rcb)
     elif teams[i] == 'srh':
-        srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids,squad = ["Kane Williamson","Abdul Samad","Umran Malik"])
+        srh = Team(purse=680000000,bmen=2,arounders=0,bwlrs=1,overseas=1,wks=0,name='srh',strats=srh_bids,squad = ["Kane Williamson","Abdul Samad","Umran Malik"], bought = srh_players)
         teams_o.append(srh)     
 
 for i in range(len(teams)):
@@ -258,7 +321,7 @@ for i in range(len(teams)):
         teams.remove(teams[i])
         break
 wait()
-print(f'Your team consists of{your_team.squad}')
+print(f'Your team consists of {','.join(your_team.squad)} and you have a purse of {your_team.purse} to make a squad of {15-len(your_team.squad)} more competent players')
 def ai(player,bids):
     for i in range(len(teams_o)):
         teams_o[i].decision_making(player,bids) #this function checks if the player is important and actively bids for the player accordingly
@@ -285,7 +348,8 @@ def removing(player,set,index):
       
           
 def bidding(set):
-    y = len(set)
+    y = len(set[0])
+    print(f"Welcome to the marquee set, this set has {y} players")
     for i in range(y):
         active_player = rd.choice(set[0])
         x = set[0].index(active_player)
@@ -325,6 +389,8 @@ def bidding(set):
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
             removing(player=active_player,set=set,index=x)
+    print(f'After the end of this set, this is how {your_team.name} looks like! \n {your_team.squad}')        
+    
             
     
 
@@ -350,6 +416,19 @@ bidding(seamers4)
 bidding(al5)
 bidding(al6)
 bidding(uncapped_prospects)      
+
+#scoring
+score = 0
+for i in range(len(your_team.squad)):
+    if your_team.squad[i] in your_team.bought:
+        score += 1
+    else:
+        continue
+l = len(your_team.squad)
+print(f'Your team({your_team.name}) has bought {score} out of the top 15 buys actually bought in IPL 2022\n with a percentage of {score*100/l}%')
+print('Thank you for participating in this Tata IPL auction, we will be back next year')
+
+
             
             
 
