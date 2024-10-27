@@ -174,12 +174,12 @@ class Team:
         if player in self.strats:
             if player in self.strats[0]:
                 options = ['bid','no bid']
-                probabilities = [0.7,0.3]
+                probabilities = [0.8,0.2]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     bids[self.name] = 'bid'
                     self.bid(2000000,player)
-                    print(f'{self.name} has raised the bid by 20 lakh!,{player.pric.loe+2000000} please?')
+                    print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
                     look_around()
                 else:
                     pass
@@ -196,7 +196,7 @@ class Team:
                     pass
             elif player in self.strats[2]:
                 options = ['bid','no bid']
-                probabilities = [0.2,0.8]
+                probabilities = [0.2867656,(1-0.02323)]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     bids[self.name] = 'bid'
@@ -207,7 +207,7 @@ class Team:
                     pass
         else:
             options = ['bid','no bid']
-            probabilities = [0.1,0.9]
+            probabilities = [0.15,0.85]
             result = rd.choices(options,probabilities)
             if result[0] == 'bid':
                 bids[self.name] = 'bid'
@@ -307,6 +307,7 @@ def bidding(set):
         print(f'It\'s {act.name} from {act.nationality}  starting at ₹{act.price} please? ')
         wait()
         bid = input("bid? enter to bid/type no to pass ")
+        look_around()
         checker = ['no bid']*len(teams)  
         if bid == '':
             while act.isSold == False:
@@ -339,7 +340,7 @@ def bidding(set):
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
             removing(player=active_player,set=set,index=x)
-    print(f'After the end of this set, this is how {your_team.name} looks like! \n {your_team.squad}')        
+    print(f'After the end of this set, this is how {your_team.name} looks like! \n {' '.join(your_team.squad)}')        
     
             
     
