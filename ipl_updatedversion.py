@@ -174,12 +174,12 @@ class Team:
         if player in self.strats:
             if player in self.strats[0]:
                 options = ['bid','no bid']
-                probabilities = [0.8,0.2]
+                probabilities = [0.7,0.3]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     bids[self.name] = 'bid'
                     self.bid(2000000,player)
-                    print(f'{self.name} has raised the bid by 20 lakh!,{player.price+2000000} please?')
+                    print(f'{self.name} has raised the bid by 20 lakh!,{player.pric.loe+2000000} please?')
                     look_around()
                 else:
                     pass
@@ -196,7 +196,7 @@ class Team:
                     pass
             elif player in self.strats[2]:
                 options = ['bid','no bid']
-                probabilities = [0.2867656,(1-0.02323)]
+                probabilities = [0.2,0.8]
                 result = rd.choices(options,probabilities)
                 if result[0] == 'bid':
                     bids[self.name] = 'bid'
@@ -207,7 +207,7 @@ class Team:
                     pass
         else:
             options = ['bid','no bid']
-            probabilities = [0.15,0.85]
+            probabilities = [0.1,0.9]
             result = rd.choices(options,probabilities)
             if result[0] == 'bid':
                 bids[self.name] = 'bid'
@@ -307,7 +307,6 @@ def bidding(set):
         print(f'It\'s {act.name} from {act.nationality}  starting at ₹{act.price} please? ')
         wait()
         bid = input("bid? enter to bid/type no to pass ")
-        look_around()
         checker = ['no bid']*len(teams)  
         if bid == '':
             while act.isSold == False:
@@ -324,23 +323,32 @@ def bidding(set):
                     act.isSold = True
                     
                 else:
-                    bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
-                    wait()
-                    if bid == '':
-                        continue
+                    if your_team.purse > act.price:
+                        bid = input("bid again?(click enter to bid)/(type anything to skip the bid)")    # your response to others' bids
+                        wait()
+                        if bid == '':
+                           continue
+                        else:
+                            for i in range(len(bids)-1,-1,-1):
+                                if bids_values[i] == 'bid':
+                                    bid_winner = list(bids.keys())[i]
+                                    print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
+                                    removing(player=active_player,set=set,index=x)
+                                    act.isSold = True
                     else:
+                        print(f'You do not have money to bid for {act.name}')
                         for i in range(len(bids)-1,-1,-1):
-                            if bids_values[i] == 'bid':
-                                bid_winner = list(bids.keys())[i]
-                                print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
-                                removing(player=active_player,set=set,index=x)
-                                act.isSold = True
+                                if bids_values[i] == 'bid':
+                                    bid_winner = list(bids.keys())[i]
+                                    print(f'{act.name} will be sold to {bid_winner} at {act.price}')       # need the record of the last bidder
+                                    removing(player=active_player,set=set,index=x)
+                                    act.isSold = True
                                 
         else:
             wait()
             print(f"{act.name} will remain unsold!, next player please!")
             removing(player=active_player,set=set,index=x)
-    print(f'After the end of this set, this is how {your_team.name} looks like! \n {' '.join(your_team.squad)}')        
+    print(f'After the end of this set, this is how {your_team.name} looks like! \n {your_team.squad}')        
     
             
     
