@@ -271,7 +271,7 @@ for i in range(len(teams)):
         teams.remove(teams[i])
         break
 wait()
-print(f'Your team consists of {','.join(your_team.squad)} and you have a purse of {your_team.purse} to make a squad of {15-len(your_team.squad)} more competent players')
+print(f"Your team consists of {', '.join(your_team.squad)} and you have a purse of {your_team.purse} to make a squad of {15 - len(your_team.squad)} more competent players")
 def ai(player,bids):
     for i in range(len(teams_o)):
         teams_o[i].decision_making(player,bids) #this function checks if the player is important and actively bids for the player accordingly
@@ -350,31 +350,10 @@ def bidding(set):
             removing(player=active_player,set=set,index=x)
     print(f'After the end of this set, this is how {your_team.name} looks like! \n {your_team.squad}')        
     
-            
-    
 
-# executing all the sets
-bidding(marquee)
-bidding(ba1)
-bidding(al1)
-bidding(wks1)
-bidding(seamers1)
-bidding(spinners1)
-bidding(ba2)
-bidding(al2)
-bidding(wks2)
-bidding(seamers2)
-bidding(spinners2)
-bidding(ba3)
-bidding(al3)
-bidding(seamers3)
-bidding(spinners3)
-bidding(ba4)
-bidding(al4)
-bidding(seamers4)
-bidding(al5)
-bidding(al6)
-bidding(uncapped_prospects)      
+sets = [marquee,ba1,al1,wks1,seamers1,spinners1,ba2,al2,wks2,seamers2,spinners2,ba3,al3,seamers3,spinners3,ba4,al4,seamers4,al5,al6,uncapped_prospects]            
+for i in range(len(sets)):
+    bidding(sets[i])    
 
 #scoring
 score = 0
